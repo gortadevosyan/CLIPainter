@@ -1,0 +1,1 @@
+The canvas has fixed virtual size of 200X200. The center is at (0, 0)

@@ -12,3 +12,11 @@ MainWindow::~MainWindow()
 {
     delete ui;
 }
+
+void MainWindow::on_commandLineText_returnPressed()
+{
+    QString command = ui->commandLineText->text();
+    ui->commandLineText->clear();
+    ui->logTextEdit->append(command);
+}
+
