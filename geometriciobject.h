@@ -9,7 +9,7 @@ class GeometricObject : public QWidget
 
 public:
     explicit GeometricObject(QWidget *parent = nullptr);
-    void setCenter(QPoint newCenter){ this->center = &newCenter;}
+    void setCenter(QPoint newCenter){ *center = newCenter;}
     virtual QPoint getCenter() = 0;
 protected:
     virtual void paintEvent(QPaintEvent* event) = 0;

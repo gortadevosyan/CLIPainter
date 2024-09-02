@@ -373,6 +373,12 @@
 			null
 		],
 		[
+			"/home/gor/programming_projects/CLIPainter/line.h",
+			"MU",
+			"EWIEGA46WW/moc_line.cpp",
+			null
+		],
+		[
 			"/home/gor/programming_projects/CLIPainter/mainwindow.h",
 			"MU",
 			"EWIEGA46WW/moc_mainwindow.cpp",
@@ -443,6 +449,7 @@
 			"MU",
 			null
 		],
+		[ "/home/gor/programming_projects/CLIPainter/line.cpp", "MU", null ],
 		[ "/home/gor/programming_projects/CLIPainter/main.cpp", "MU", null ],
 		[
 			"/home/gor/programming_projects/CLIPainter/mainwindow.cpp",
