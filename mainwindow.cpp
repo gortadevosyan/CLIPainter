@@ -20,3 +20,4 @@ void MainWindow::on_commandLineText_returnPressed()
     ui->logTextEdit->append(command);
 }
 
+

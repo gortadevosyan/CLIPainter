@@ -1,4 +1,5 @@
 CLIPainter_autogen/timestamp: \
+	/home/gor/Qt/6.7.2/gcc_64/include/QtCore/QObject \
 	/home/gor/Qt/6.7.2/gcc_64/include/QtCore/q20functional.h \
 	/home/gor/Qt/6.7.2/gcc_64/include/QtCore/q20memory.h \
 	/home/gor/Qt/6.7.2/gcc_64/include/QtCore/q20type_traits.h \
@@ -141,6 +142,7 @@ CLIPainter_autogen/timestamp: \
 	/home/gor/Qt/6.7.2/gcc_64/include/QtGui/qtransform.h \
 	/home/gor/Qt/6.7.2/gcc_64/include/QtGui/qwindowdefs.h \
 	/home/gor/Qt/6.7.2/gcc_64/include/QtWidgets/QMainWindow \
+	/home/gor/Qt/6.7.2/gcc_64/include/QtWidgets/QWidget \
 	/home/gor/Qt/6.7.2/gcc_64/include/QtWidgets/qmainwindow.h \
 	/home/gor/Qt/6.7.2/gcc_64/include/QtWidgets/qsizepolicy.h \
 	/home/gor/Qt/6.7.2/gcc_64/include/QtWidgets/qtabwidget.h \
@@ -364,80 +366,23 @@ CLIPainter_autogen/timestamp: \
 	/home/gor/Qt/6.7.2/gcc_64/lib/cmake/Qt6WidgetsTools/Qt6WidgetsToolsTargets-relwithdebinfo.cmake \
 	/home/gor/Qt/6.7.2/gcc_64/lib/cmake/Qt6WidgetsTools/Qt6WidgetsToolsTargets.cmake \
 	/home/gor/Qt/6.7.2/gcc_64/lib/cmake/Qt6WidgetsTools/Qt6WidgetsToolsVersionlessTargets.cmake \
-	/home/gor/Qt/Tools/CMake/share/cmake-3.29/Modules/CMakeCXXCompiler.cmake.in \
-	/home/gor/Qt/Tools/CMake/share/cmake-3.29/Modules/CMakeCXXCompilerABI.cpp \
 	/home/gor/Qt/Tools/CMake/share/cmake-3.29/Modules/CMakeCXXInformation.cmake \
 	/home/gor/Qt/Tools/CMake/share/cmake-3.29/Modules/CMakeCheckCompilerFlagCommonPatterns.cmake \
 	/home/gor/Qt/Tools/CMake/share/cmake-3.29/Modules/CMakeCommonLanguageInclude.cmake \
-	/home/gor/Qt/Tools/CMake/share/cmake-3.29/Modules/CMakeCompilerIdDetection.cmake \
-	/home/gor/Qt/Tools/CMake/share/cmake-3.29/Modules/CMakeDetermineCXXCompiler.cmake \
-	/home/gor/Qt/Tools/CMake/share/cmake-3.29/Modules/CMakeDetermineCompileFeatures.cmake \
-	/home/gor/Qt/Tools/CMake/share/cmake-3.29/Modules/CMakeDetermineCompiler.cmake \
-	/home/gor/Qt/Tools/CMake/share/cmake-3.29/Modules/CMakeDetermineCompilerABI.cmake \
-	/home/gor/Qt/Tools/CMake/share/cmake-3.29/Modules/CMakeDetermineCompilerId.cmake \
-	/home/gor/Qt/Tools/CMake/share/cmake-3.29/Modules/CMakeDetermineSystem.cmake \
-	/home/gor/Qt/Tools/CMake/share/cmake-3.29/Modules/CMakeFindBinUtils.cmake \
 	/home/gor/Qt/Tools/CMake/share/cmake-3.29/Modules/CMakeFindDependencyMacro.cmake \
 	/home/gor/Qt/Tools/CMake/share/cmake-3.29/Modules/CMakeGenericSystem.cmake \
 	/home/gor/Qt/Tools/CMake/share/cmake-3.29/Modules/CMakeInitializeConfigs.cmake \
 	/home/gor/Qt/Tools/CMake/share/cmake-3.29/Modules/CMakeLanguageInformation.cmake \
-	/home/gor/Qt/Tools/CMake/share/cmake-3.29/Modules/CMakeNinjaFindMake.cmake \
-	/home/gor/Qt/Tools/CMake/share/cmake-3.29/Modules/CMakeParseImplicitIncludeInfo.cmake \
-	/home/gor/Qt/Tools/CMake/share/cmake-3.29/Modules/CMakeParseImplicitLinkInfo.cmake \
-	/home/gor/Qt/Tools/CMake/share/cmake-3.29/Modules/CMakeParseLibraryArchitecture.cmake \
-	/home/gor/Qt/Tools/CMake/share/cmake-3.29/Modules/CMakeSystem.cmake.in \
 	/home/gor/Qt/Tools/CMake/share/cmake-3.29/Modules/CMakeSystemSpecificInformation.cmake \
 	/home/gor/Qt/Tools/CMake/share/cmake-3.29/Modules/CMakeSystemSpecificInitialize.cmake \
-	/home/gor/Qt/Tools/CMake/share/cmake-3.29/Modules/CMakeTestCXXCompiler.cmake \
-	/home/gor/Qt/Tools/CMake/share/cmake-3.29/Modules/CMakeTestCompilerCommon.cmake \
 	/home/gor/Qt/Tools/CMake/share/cmake-3.29/Modules/CheckCXXCompilerFlag.cmake \
 	/home/gor/Qt/Tools/CMake/share/cmake-3.29/Modules/CheckCXXSourceCompiles.cmake \
 	/home/gor/Qt/Tools/CMake/share/cmake-3.29/Modules/CheckIncludeFileCXX.cmake \
 	/home/gor/Qt/Tools/CMake/share/cmake-3.29/Modules/CheckLibraryExists.cmake \
-	/home/gor/Qt/Tools/CMake/share/cmake-3.29/Modules/Compiler/ADSP-DetermineCompiler.cmake \
-	/home/gor/Qt/Tools/CMake/share/cmake-3.29/Modules/Compiler/ARMCC-DetermineCompiler.cmake \
-	/home/gor/Qt/Tools/CMake/share/cmake-3.29/Modules/Compiler/ARMClang-DetermineCompiler.cmake \
-	/home/gor/Qt/Tools/CMake/share/cmake-3.29/Modules/Compiler/AppleClang-DetermineCompiler.cmake \
-	/home/gor/Qt/Tools/CMake/share/cmake-3.29/Modules/Compiler/Borland-DetermineCompiler.cmake \
 	/home/gor/Qt/Tools/CMake/share/cmake-3.29/Modules/Compiler/CMakeCommonCompilerMacros.cmake \
 	/home/gor/Qt/Tools/CMake/share/cmake-3.29/Modules/Compiler/Clang-CXX.cmake \
-	/home/gor/Qt/Tools/CMake/share/cmake-3.29/Modules/Compiler/Clang-DetermineCompiler.cmake \
-	/home/gor/Qt/Tools/CMake/share/cmake-3.29/Modules/Compiler/Clang-DetermineCompilerInternal.cmake \
-	/home/gor/Qt/Tools/CMake/share/cmake-3.29/Modules/Compiler/Clang-FindBinUtils.cmake \
 	/home/gor/Qt/Tools/CMake/share/cmake-3.29/Modules/Compiler/Clang.cmake \
-	/home/gor/Qt/Tools/CMake/share/cmake-3.29/Modules/Compiler/Compaq-CXX-DetermineCompiler.cmake \
-	/home/gor/Qt/Tools/CMake/share/cmake-3.29/Modules/Compiler/Cray-DetermineCompiler.cmake \
-	/home/gor/Qt/Tools/CMake/share/cmake-3.29/Modules/Compiler/CrayClang-DetermineCompiler.cmake \
-	/home/gor/Qt/Tools/CMake/share/cmake-3.29/Modules/Compiler/Embarcadero-DetermineCompiler.cmake \
-	/home/gor/Qt/Tools/CMake/share/cmake-3.29/Modules/Compiler/Fujitsu-DetermineCompiler.cmake \
-	/home/gor/Qt/Tools/CMake/share/cmake-3.29/Modules/Compiler/FujitsuClang-DetermineCompiler.cmake \
-	/home/gor/Qt/Tools/CMake/share/cmake-3.29/Modules/Compiler/GHS-DetermineCompiler.cmake \
-	/home/gor/Qt/Tools/CMake/share/cmake-3.29/Modules/Compiler/GNU-CXX-DetermineCompiler.cmake \
 	/home/gor/Qt/Tools/CMake/share/cmake-3.29/Modules/Compiler/GNU.cmake \
-	/home/gor/Qt/Tools/CMake/share/cmake-3.29/Modules/Compiler/HP-CXX-DetermineCompiler.cmake \
-	/home/gor/Qt/Tools/CMake/share/cmake-3.29/Modules/Compiler/IAR-DetermineCompiler.cmake \
-	/home/gor/Qt/Tools/CMake/share/cmake-3.29/Modules/Compiler/IBMCPP-CXX-DetermineVersionInternal.cmake \
-	/home/gor/Qt/Tools/CMake/share/cmake-3.29/Modules/Compiler/IBMClang-CXX-DetermineCompiler.cmake \
-	/home/gor/Qt/Tools/CMake/share/cmake-3.29/Modules/Compiler/Intel-DetermineCompiler.cmake \
-	/home/gor/Qt/Tools/CMake/share/cmake-3.29/Modules/Compiler/IntelLLVM-DetermineCompiler.cmake \
-	/home/gor/Qt/Tools/CMake/share/cmake-3.29/Modules/Compiler/LCC-CXX-DetermineCompiler.cmake \
-	/home/gor/Qt/Tools/CMake/share/cmake-3.29/Modules/Compiler/MSVC-DetermineCompiler.cmake \
-	/home/gor/Qt/Tools/CMake/share/cmake-3.29/Modules/Compiler/NVHPC-DetermineCompiler.cmake \
-	/home/gor/Qt/Tools/CMake/share/cmake-3.29/Modules/Compiler/NVIDIA-DetermineCompiler.cmake \
-	/home/gor/Qt/Tools/CMake/share/cmake-3.29/Modules/Compiler/OpenWatcom-DetermineCompiler.cmake \
-	/home/gor/Qt/Tools/CMake/share/cmake-3.29/Modules/Compiler/OrangeC-DetermineCompiler.cmake \
-	/home/gor/Qt/Tools/CMake/share/cmake-3.29/Modules/Compiler/PGI-DetermineCompiler.cmake \
-	/home/gor/Qt/Tools/CMake/share/cmake-3.29/Modules/Compiler/PathScale-DetermineCompiler.cmake \
-	/home/gor/Qt/Tools/CMake/share/cmake-3.29/Modules/Compiler/SCO-DetermineCompiler.cmake \
-	/home/gor/Qt/Tools/CMake/share/cmake-3.29/Modules/Compiler/SunPro-CXX-DetermineCompiler.cmake \
-	/home/gor/Qt/Tools/CMake/share/cmake-3.29/Modules/Compiler/TI-DetermineCompiler.cmake \
-	/home/gor/Qt/Tools/CMake/share/cmake-3.29/Modules/Compiler/TIClang-DetermineCompiler.cmake \
-	/home/gor/Qt/Tools/CMake/share/cmake-3.29/Modules/Compiler/Tasking-DetermineCompiler.cmake \
-	/home/gor/Qt/Tools/CMake/share/cmake-3.29/Modules/Compiler/VisualAge-CXX-DetermineCompiler.cmake \
-	/home/gor/Qt/Tools/CMake/share/cmake-3.29/Modules/Compiler/Watcom-DetermineCompiler.cmake \
-	/home/gor/Qt/Tools/CMake/share/cmake-3.29/Modules/Compiler/XL-CXX-DetermineCompiler.cmake \
-	/home/gor/Qt/Tools/CMake/share/cmake-3.29/Modules/Compiler/XLClang-CXX-DetermineCompiler.cmake \
-	/home/gor/Qt/Tools/CMake/share/cmake-3.29/Modules/Compiler/zOS-CXX-DetermineCompiler.cmake \
 	/home/gor/Qt/Tools/CMake/share/cmake-3.29/Modules/FeatureSummary.cmake \
 	/home/gor/Qt/Tools/CMake/share/cmake-3.29/Modules/FindOpenGL.cmake \
 	/home/gor/Qt/Tools/CMake/share/cmake-3.29/Modules/FindPackageHandleStandardArgs.cmake \
@@ -446,14 +391,11 @@ CLIPainter_autogen/timestamp: \
 	/home/gor/Qt/Tools/CMake/share/cmake-3.29/Modules/FindThreads.cmake \
 	/home/gor/Qt/Tools/CMake/share/cmake-3.29/Modules/FindVulkan.cmake \
 	/home/gor/Qt/Tools/CMake/share/cmake-3.29/Modules/GNUInstallDirs.cmake \
-	/home/gor/Qt/Tools/CMake/share/cmake-3.29/Modules/Internal/CMakeDetermineLinkerId.cmake \
 	/home/gor/Qt/Tools/CMake/share/cmake-3.29/Modules/Internal/CheckCompilerFlag.cmake \
 	/home/gor/Qt/Tools/CMake/share/cmake-3.29/Modules/Internal/CheckFlagCommonConfig.cmake \
 	/home/gor/Qt/Tools/CMake/share/cmake-3.29/Modules/Internal/CheckSourceCompiles.cmake \
-	/home/gor/Qt/Tools/CMake/share/cmake-3.29/Modules/Internal/FeatureTesting.cmake \
 	/home/gor/Qt/Tools/CMake/share/cmake-3.29/Modules/MacroAddFileDependencies.cmake \
 	/home/gor/Qt/Tools/CMake/share/cmake-3.29/Modules/Platform/Linux-Clang-CXX.cmake \
-	/home/gor/Qt/Tools/CMake/share/cmake-3.29/Modules/Platform/Linux-Determine-CXX.cmake \
 	/home/gor/Qt/Tools/CMake/share/cmake-3.29/Modules/Platform/Linux-GNU-CXX.cmake \
 	/home/gor/Qt/Tools/CMake/share/cmake-3.29/Modules/Platform/Linux-GNU.cmake \
 	/home/gor/Qt/Tools/CMake/share/cmake-3.29/Modules/Platform/Linux-Initialize.cmake \
@@ -464,6 +406,8 @@ CLIPainter_autogen/timestamp: \
 	/home/gor/programming_projects/CLIPainter/build/Desktop_Qt_6_7_2-Debug/CLIPainter_autogen/moc_predefs.h \
 	/home/gor/programming_projects/CLIPainter/build/Desktop_Qt_6_7_2-Debug/CMakeFiles/3.29.3/CMakeCXXCompiler.cmake \
 	/home/gor/programming_projects/CLIPainter/build/Desktop_Qt_6_7_2-Debug/CMakeFiles/3.29.3/CMakeSystem.cmake \
+	/home/gor/programming_projects/CLIPainter/commandMessageHandler.cpp \
+	/home/gor/programming_projects/CLIPainter/geometriciobject.h \
 	/home/gor/programming_projects/CLIPainter/main.cpp \
 	/home/gor/programming_projects/CLIPainter/mainwindow.cpp \
 	/home/gor/programming_projects/CLIPainter/mainwindow.h \
@@ -660,6 +604,7 @@ CLIPainter_autogen/timestamp: \
 	/usr/include/x86_64-linux-gnu/bits/select.h \
 	/usr/include/x86_64-linux-gnu/bits/setjmp.h \
 	/usr/include/x86_64-linux-gnu/bits/stdint-intn.h \
+	/usr/include/x86_64-linux-gnu/bits/stdint-least.h \
 	/usr/include/x86_64-linux-gnu/bits/stdint-uintn.h \
 	/usr/include/x86_64-linux-gnu/bits/stdio_lim.h \
 	/usr/include/x86_64-linux-gnu/bits/stdlib-float.h \

@@ -19,7 +19,7 @@ public:
 
 private slots:
     void on_commandLineText_returnPressed();
-
+    //void resizeEvent(QResizeEvent* event) override;
 private:
     Ui::MainWindow *ui;
 };
