@@ -7,8 +7,8 @@
 class BaseGraphicsItem : public QGraphicsItem
 {
 public:
-    BaseGraphicsItem(QString str = NULL):
-        QGraphicsItem()
+    BaseGraphicsItem(QString str = NULL, QGraphicsItem *parent = nullptr):
+        QGraphicsItem(parent)
     {
         name = str;
     };
@@ -18,9 +18,11 @@ public:
 protected:
     void paint(QPainter *painter, const QStyleOptionGraphicsItem *option, QWidget *widget) override {
         painter->setPen(Qt::black);
-        painter->setBrush(Qt::blue);
         painter->setFont(QFont());
-        painter->drawText(boundingRect(), Qt::AlignLeft | Qt::AlignTop, name);
+        painter->drawText(boundingRect(), Qt::AlignCenter | Qt::AlignCenter, name);
+    }
+    void fill(QPainter *painter){
+        painter->setBrush(Qt::blue);
     }
 private:
     QString name;

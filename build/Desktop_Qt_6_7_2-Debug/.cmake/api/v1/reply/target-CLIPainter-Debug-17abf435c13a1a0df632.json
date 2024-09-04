@@ -71,13 +71,13 @@
 			{
 				"command" : 4,
 				"file" : 1,
-				"line" : 69,
+				"line" : 70,
 				"parent" : 0
 			},
 			{
 				"command" : 5,
 				"file" : 1,
-				"line" : 52,
+				"line" : 53,
 				"parent" : 0
 			},
 			{
@@ -286,21 +286,20 @@
 				1,
 				2,
 				5,
-				8,
-				10,
-				12,
-				14
+				7,
+				9,
+				11
 			]
 		}
 	],
 	"dependencies" : 
 	[
 		{
-			"backtrace" : 0,
-			"id" : "CLIPainter_autogen::@6890427a1f51a3e7e1df"
+			"id" : "CLIPainter_autogen_timestamp_deps::@6890427a1f51a3e7e1df"
 		},
 		{
-			"id" : "CLIPainter_autogen_timestamp_deps::@6890427a1f51a3e7e1df"
+			"backtrace" : 0,
+			"id" : "CLIPainter_autogen::@6890427a1f51a3e7e1df"
 		}
 	],
 	"id" : "CLIPainter::@6890427a1f51a3e7e1df",
@@ -379,10 +378,9 @@
 				1,
 				2,
 				5,
-				8,
-				10,
-				12,
-				14
+				7,
+				9,
+				11
 			]
 		},
 		{
@@ -391,11 +389,9 @@
 			[
 				3,
 				6,
-				7,
-				9,
-				11,
-				13,
-				15
+				8,
+				10,
+				12
 			]
 		},
 		{
@@ -403,14 +399,14 @@
 			"sourceIndexes" : 
 			[
 				4,
-				16
+				13
 			]
 		},
 		{
 			"name" : "CMake Rules",
 			"sourceIndexes" : 
 			[
-				17
+				14
 			]
 		}
 	],
@@ -453,40 +449,13 @@
 		},
 		{
 			"backtrace" : 4,
-			"path" : "geometriciobject.h",
-			"sourceGroupIndex" : 1
-		},
-		{
-			"backtrace" : 4,
-			"path" : "line.h",
+			"path" : "lineitem.h",
 			"sourceGroupIndex" : 1
 		},
 		{
 			"backtrace" : 4,
 			"compileGroupIndex" : 0,
-			"path" : "line.cpp",
-			"sourceGroupIndex" : 0
-		},
-		{
-			"backtrace" : 4,
-			"path" : "rectangle.h",
-			"sourceGroupIndex" : 1
-		},
-		{
-			"backtrace" : 4,
-			"compileGroupIndex" : 0,
-			"path" : "rectangle.cpp",
-			"sourceGroupIndex" : 0
-		},
-		{
-			"backtrace" : 4,
-			"path" : "linegraphicsitem.h",
-			"sourceGroupIndex" : 1
-		},
-		{
-			"backtrace" : 4,
-			"compileGroupIndex" : 0,
-			"path" : "linegraphicsitem.cpp",
+			"path" : "lineitem.cpp",
 			"sourceGroupIndex" : 0
 		},
 		{
@@ -498,6 +467,17 @@
 			"backtrace" : 4,
 			"compileGroupIndex" : 0,
 			"path" : "basegraphicsitem.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 4,
+			"path" : "rectangleitem.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 4,
+			"compileGroupIndex" : 0,
+			"path" : "rectangleitem.cpp",
 			"sourceGroupIndex" : 0
 		},
 		{

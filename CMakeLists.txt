@@ -24,11 +24,12 @@ if(${QT_VERSION_MAJOR} GREATER_EQUAL 6)
         MANUAL_FINALIZATION
         ${PROJECT_SOURCES}
         commandMessageHandler.cpp
-        geometriciobject.h
-        line.h line.cpp
-        rectangle.h rectangle.cpp
+
+
+
         lineitem.h lineitem.cpp
         basegraphicsitem.h basegraphicsitem.cpp
+        rectangleitem.h rectangleitem.cpp
 
     )
 # Define target properties for Android with Qt 6 as:

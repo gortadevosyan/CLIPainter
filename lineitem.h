@@ -9,7 +9,7 @@ class LineItem : public BaseGraphicsItem
 {
 public:
     LineItem(qreal x1, qreal y1, qreal x2, qreal y2, QGraphicsObject *parent = nullptr, QString name = NULL):
-        BaseGraphicsItem(name)
+        BaseGraphicsItem(name, parent)
     {
         line = new QGraphicsLineItem(x1, y1, x2, y2, parent);
     }

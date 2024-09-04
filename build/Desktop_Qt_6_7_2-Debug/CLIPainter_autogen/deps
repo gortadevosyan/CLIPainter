@@ -1,5 +1,4 @@
 CLIPainter_autogen/timestamp: \
-	/home/gor/Qt/6.7.2/gcc_64/include/QtCore/QObject \
 	/home/gor/Qt/6.7.2/gcc_64/include/QtCore/q20functional.h \
 	/home/gor/Qt/6.7.2/gcc_64/include/QtCore/q20memory.h \
 	/home/gor/Qt/6.7.2/gcc_64/include/QtCore/q20type_traits.h \
@@ -145,7 +144,6 @@ CLIPainter_autogen/timestamp: \
 	/home/gor/Qt/6.7.2/gcc_64/include/QtWidgets/QGraphicsScene \
 	/home/gor/Qt/6.7.2/gcc_64/include/QtWidgets/QMainWindow \
 	/home/gor/Qt/6.7.2/gcc_64/include/QtWidgets/QVBoxLayout \
-	/home/gor/Qt/6.7.2/gcc_64/include/QtWidgets/QWidget \
 	/home/gor/Qt/6.7.2/gcc_64/include/QtWidgets/qboxlayout.h \
 	/home/gor/Qt/6.7.2/gcc_64/include/QtWidgets/qgraphicsscene.h \
 	/home/gor/Qt/6.7.2/gcc_64/include/QtWidgets/qgridlayout.h \
@@ -417,16 +415,13 @@ CLIPainter_autogen/timestamp: \
 	/home/gor/programming_projects/CLIPainter/build/Desktop_Qt_6_7_2-Debug/CMakeFiles/3.29.3/CMakeCXXCompiler.cmake \
 	/home/gor/programming_projects/CLIPainter/build/Desktop_Qt_6_7_2-Debug/CMakeFiles/3.29.3/CMakeSystem.cmake \
 	/home/gor/programming_projects/CLIPainter/commandMessageHandler.cpp \
-	/home/gor/programming_projects/CLIPainter/geometriciobject.h \
-	/home/gor/programming_projects/CLIPainter/line.cpp \
-	/home/gor/programming_projects/CLIPainter/line.h \
 	/home/gor/programming_projects/CLIPainter/lineitem.cpp \
 	/home/gor/programming_projects/CLIPainter/lineitem.h \
 	/home/gor/programming_projects/CLIPainter/main.cpp \
 	/home/gor/programming_projects/CLIPainter/mainwindow.cpp \
 	/home/gor/programming_projects/CLIPainter/mainwindow.h \
-	/home/gor/programming_projects/CLIPainter/rectangle.cpp \
-	/home/gor/programming_projects/CLIPainter/rectangle.h \
+	/home/gor/programming_projects/CLIPainter/rectangleitem.cpp \
+	/home/gor/programming_projects/CLIPainter/rectangleitem.h \
 	/usr/include/alloca.h \
 	/usr/include/asm-generic/errno-base.h \
 	/usr/include/asm-generic/errno.h \

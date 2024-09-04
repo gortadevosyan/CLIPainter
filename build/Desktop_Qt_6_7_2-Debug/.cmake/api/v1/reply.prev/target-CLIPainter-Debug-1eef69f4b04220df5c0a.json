@@ -286,21 +286,19 @@
 				1,
 				2,
 				5,
-				8,
-				10,
-				12,
-				14
+				7,
+				9
 			]
 		}
 	],
 	"dependencies" : 
 	[
 		{
-			"id" : "CLIPainter_autogen_timestamp_deps::@6890427a1f51a3e7e1df"
-		},
-		{
 			"backtrace" : 0,
 			"id" : "CLIPainter_autogen::@6890427a1f51a3e7e1df"
+		},
+		{
+			"id" : "CLIPainter_autogen_timestamp_deps::@6890427a1f51a3e7e1df"
 		}
 	],
 	"id" : "CLIPainter::@6890427a1f51a3e7e1df",
@@ -379,10 +377,8 @@
 				1,
 				2,
 				5,
-				8,
-				10,
-				12,
-				14
+				7,
+				9
 			]
 		},
 		{
@@ -391,11 +387,8 @@
 			[
 				3,
 				6,
-				7,
-				9,
-				11,
-				13,
-				15
+				8,
+				10
 			]
 		},
 		{
@@ -403,14 +396,14 @@
 			"sourceIndexes" : 
 			[
 				4,
-				16
+				11
 			]
 		},
 		{
 			"name" : "CMake Rules",
 			"sourceIndexes" : 
 			[
-				17
+				12
 			]
 		}
 	],
@@ -449,33 +442,6 @@
 			"backtrace" : 4,
 			"compileGroupIndex" : 0,
 			"path" : "commandMessageHandler.cpp",
-			"sourceGroupIndex" : 0
-		},
-		{
-			"backtrace" : 4,
-			"path" : "geometriciobject.h",
-			"sourceGroupIndex" : 1
-		},
-		{
-			"backtrace" : 4,
-			"path" : "line.h",
-			"sourceGroupIndex" : 1
-		},
-		{
-			"backtrace" : 4,
-			"compileGroupIndex" : 0,
-			"path" : "line.cpp",
-			"sourceGroupIndex" : 0
-		},
-		{
-			"backtrace" : 4,
-			"path" : "rectangle.h",
-			"sourceGroupIndex" : 1
-		},
-		{
-			"backtrace" : 4,
-			"compileGroupIndex" : 0,
-			"path" : "rectangle.cpp",
 			"sourceGroupIndex" : 0
 		},
 		{
