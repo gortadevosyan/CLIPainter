@@ -1,16 +1,17 @@
 #ifndef LINE_H
 #define LINE_H
 #include "geometriciobject.h"
-#include <QObject>
-#include <qpoint.h>
+#include <QGraphicsObject>
 class Line : public GeometricObject
 {
 public:
-    Line(int x1, int y1, int x2, int y2);
+    Line(int x1, int y1, int x2, int y2, QWidget *parent);
+    ~Line();
+    QPoint getCenter() override;
 protected:
-    void paintEvent(QPaintEvent* event);
+    void paintEvent(QPaintEvent* event) override;
 private:
-    QPoint *coord_1, *coord_2;
+    const QLine *line;
 };
 
 #endif // LINE_H

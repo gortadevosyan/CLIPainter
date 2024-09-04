@@ -130,6 +130,7 @@
   /home/gor/Qt/6.7.2/gcc_64/include/QtGui/qkeysequence.h \
   /home/gor/Qt/6.7.2/gcc_64/include/QtGui/qpaintdevice.h \
   /home/gor/Qt/6.7.2/gcc_64/include/QtGui/qpalette.h \
+  /home/gor/Qt/6.7.2/gcc_64/include/QtGui/qpen.h \
   /home/gor/Qt/6.7.2/gcc_64/include/QtGui/qpixelformat.h \
   /home/gor/Qt/6.7.2/gcc_64/include/QtGui/qpixmap.h \
   /home/gor/Qt/6.7.2/gcc_64/include/QtGui/qpolygon.h \
@@ -141,7 +142,14 @@
   /home/gor/Qt/6.7.2/gcc_64/include/QtGui/qtguiglobal.h \
   /home/gor/Qt/6.7.2/gcc_64/include/QtGui/qtransform.h \
   /home/gor/Qt/6.7.2/gcc_64/include/QtGui/qwindowdefs.h \
+  /home/gor/Qt/6.7.2/gcc_64/include/QtWidgets/QGraphicsScene \
   /home/gor/Qt/6.7.2/gcc_64/include/QtWidgets/QMainWindow \
+  /home/gor/Qt/6.7.2/gcc_64/include/QtWidgets/QVBoxLayout \
+  /home/gor/Qt/6.7.2/gcc_64/include/QtWidgets/qboxlayout.h \
+  /home/gor/Qt/6.7.2/gcc_64/include/QtWidgets/qgraphicsscene.h \
+  /home/gor/Qt/6.7.2/gcc_64/include/QtWidgets/qgridlayout.h \
+  /home/gor/Qt/6.7.2/gcc_64/include/QtWidgets/qlayout.h \
+  /home/gor/Qt/6.7.2/gcc_64/include/QtWidgets/qlayoutitem.h \
   /home/gor/Qt/6.7.2/gcc_64/include/QtWidgets/qmainwindow.h \
   /home/gor/Qt/6.7.2/gcc_64/include/QtWidgets/qsizepolicy.h \
   /home/gor/Qt/6.7.2/gcc_64/include/QtWidgets/qtabwidget.h \
@@ -342,6 +350,7 @@
   /usr/include/x86_64-linux-gnu/bits/select.h \
   /usr/include/x86_64-linux-gnu/bits/setjmp.h \
   /usr/include/x86_64-linux-gnu/bits/stdint-intn.h \
+  /usr/include/x86_64-linux-gnu/bits/stdint-least.h \
   /usr/include/x86_64-linux-gnu/bits/stdint-uintn.h \
   /usr/include/x86_64-linux-gnu/bits/stdio_lim.h \
   /usr/include/x86_64-linux-gnu/bits/stdlib-float.h \

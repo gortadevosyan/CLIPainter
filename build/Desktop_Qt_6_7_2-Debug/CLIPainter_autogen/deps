@@ -130,6 +130,7 @@ CLIPainter_autogen/timestamp: \
 	/home/gor/Qt/6.7.2/gcc_64/include/QtGui/qkeysequence.h \
 	/home/gor/Qt/6.7.2/gcc_64/include/QtGui/qpaintdevice.h \
 	/home/gor/Qt/6.7.2/gcc_64/include/QtGui/qpalette.h \
+	/home/gor/Qt/6.7.2/gcc_64/include/QtGui/qpen.h \
 	/home/gor/Qt/6.7.2/gcc_64/include/QtGui/qpixelformat.h \
 	/home/gor/Qt/6.7.2/gcc_64/include/QtGui/qpixmap.h \
 	/home/gor/Qt/6.7.2/gcc_64/include/QtGui/qpolygon.h \
@@ -141,8 +142,15 @@ CLIPainter_autogen/timestamp: \
 	/home/gor/Qt/6.7.2/gcc_64/include/QtGui/qtguiglobal.h \
 	/home/gor/Qt/6.7.2/gcc_64/include/QtGui/qtransform.h \
 	/home/gor/Qt/6.7.2/gcc_64/include/QtGui/qwindowdefs.h \
+	/home/gor/Qt/6.7.2/gcc_64/include/QtWidgets/QGraphicsScene \
 	/home/gor/Qt/6.7.2/gcc_64/include/QtWidgets/QMainWindow \
+	/home/gor/Qt/6.7.2/gcc_64/include/QtWidgets/QVBoxLayout \
 	/home/gor/Qt/6.7.2/gcc_64/include/QtWidgets/QWidget \
+	/home/gor/Qt/6.7.2/gcc_64/include/QtWidgets/qboxlayout.h \
+	/home/gor/Qt/6.7.2/gcc_64/include/QtWidgets/qgraphicsscene.h \
+	/home/gor/Qt/6.7.2/gcc_64/include/QtWidgets/qgridlayout.h \
+	/home/gor/Qt/6.7.2/gcc_64/include/QtWidgets/qlayout.h \
+	/home/gor/Qt/6.7.2/gcc_64/include/QtWidgets/qlayoutitem.h \
 	/home/gor/Qt/6.7.2/gcc_64/include/QtWidgets/qmainwindow.h \
 	/home/gor/Qt/6.7.2/gcc_64/include/QtWidgets/qsizepolicy.h \
 	/home/gor/Qt/6.7.2/gcc_64/include/QtWidgets/qtabwidget.h \
@@ -402,15 +410,23 @@ CLIPainter_autogen/timestamp: \
 	/home/gor/Qt/Tools/CMake/share/cmake-3.29/Modules/Platform/Linux.cmake \
 	/home/gor/Qt/Tools/CMake/share/cmake-3.29/Modules/Platform/UnixPaths.cmake \
 	/home/gor/programming_projects/CLIPainter/CMakeLists.txt \
+	/home/gor/programming_projects/CLIPainter/basegraphicsitem.cpp \
+	/home/gor/programming_projects/CLIPainter/basegraphicsitem.h \
 	/home/gor/programming_projects/CLIPainter/build/Desktop_Qt_6_7_2-Debug/.qtc/package-manager/auto-setup.cmake \
 	/home/gor/programming_projects/CLIPainter/build/Desktop_Qt_6_7_2-Debug/CLIPainter_autogen/moc_predefs.h \
 	/home/gor/programming_projects/CLIPainter/build/Desktop_Qt_6_7_2-Debug/CMakeFiles/3.29.3/CMakeCXXCompiler.cmake \
 	/home/gor/programming_projects/CLIPainter/build/Desktop_Qt_6_7_2-Debug/CMakeFiles/3.29.3/CMakeSystem.cmake \
 	/home/gor/programming_projects/CLIPainter/commandMessageHandler.cpp \
 	/home/gor/programming_projects/CLIPainter/geometriciobject.h \
+	/home/gor/programming_projects/CLIPainter/line.cpp \
+	/home/gor/programming_projects/CLIPainter/line.h \
+	/home/gor/programming_projects/CLIPainter/lineitem.cpp \
+	/home/gor/programming_projects/CLIPainter/lineitem.h \
 	/home/gor/programming_projects/CLIPainter/main.cpp \
 	/home/gor/programming_projects/CLIPainter/mainwindow.cpp \
 	/home/gor/programming_projects/CLIPainter/mainwindow.h \
+	/home/gor/programming_projects/CLIPainter/rectangle.cpp \
+	/home/gor/programming_projects/CLIPainter/rectangle.h \
 	/usr/include/alloca.h \
 	/usr/include/asm-generic/errno-base.h \
 	/usr/include/asm-generic/errno.h \

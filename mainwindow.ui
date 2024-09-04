@@ -17,24 +17,11 @@
    <widget class="QLineEdit" name="commandLineText">
     <property name="geometry">
      <rect>
-      <x>160</x>
+      <x>10</x>
       <y>510</y>
-      <width>621</width>
+      <width>771</width>
       <height>41</height>
      </rect>
-    </property>
-   </widget>
-   <widget class="QLabel" name="commandConsole">
-    <property name="geometry">
-     <rect>
-      <x>10</x>
-      <y>520</y>
-      <width>141</width>
-      <height>18</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>Command Console</string>
     </property>
    </widget>
    <widget class="QTextEdit" name="logTextEdit">
@@ -50,26 +37,13 @@
      <bool>true</bool>
     </property>
    </widget>
-   <widget class="QLabel" name="logs">
-    <property name="geometry">
-     <rect>
-      <x>10</x>
-      <y>430</y>
-      <width>72</width>
-      <height>18</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>Logs</string>
-    </property>
-   </widget>
    <widget class="QGraphicsView" name="graphicsView">
     <property name="geometry">
      <rect>
       <x>10</x>
-      <y>40</y>
+      <y>30</y>
       <width>771</width>
-      <height>381</height>
+      <height>411</height>
      </rect>
     </property>
    </widget>

@@ -367,6 +367,12 @@
 	"HEADERS" : 
 	[
 		[
+			"/home/gor/programming_projects/CLIPainter/basegraphicsitem.h",
+			"MU",
+			"EWIEGA46WW/moc_basegraphicsitem.cpp",
+			null
+		],
+		[
 			"/home/gor/programming_projects/CLIPainter/geometriciobject.h",
 			"MU",
 			"EWIEGA46WW/moc_geometriciobject.cpp",
@@ -379,9 +385,21 @@
 			null
 		],
 		[
+			"/home/gor/programming_projects/CLIPainter/lineitem.h",
+			"MU",
+			"EWIEGA46WW/moc_lineitem.cpp",
+			null
+		],
+		[
 			"/home/gor/programming_projects/CLIPainter/mainwindow.h",
 			"MU",
 			"EWIEGA46WW/moc_mainwindow.cpp",
+			null
+		],
+		[
+			"/home/gor/programming_projects/CLIPainter/rectangle.h",
+			"MU",
+			"EWIEGA46WW/moc_rectangle.cpp",
 			null
 		]
 	],
@@ -445,17 +463,24 @@
 	"SOURCES" : 
 	[
 		[
+			"/home/gor/programming_projects/CLIPainter/basegraphicsitem.cpp",
+			"MU",
+			null
+		],
+		[
 			"/home/gor/programming_projects/CLIPainter/commandMessageHandler.cpp",
 			"MU",
 			null
 		],
 		[ "/home/gor/programming_projects/CLIPainter/line.cpp", "MU", null ],
+		[ "/home/gor/programming_projects/CLIPainter/lineitem.cpp", "MU", null ],
 		[ "/home/gor/programming_projects/CLIPainter/main.cpp", "MU", null ],
 		[
 			"/home/gor/programming_projects/CLIPainter/mainwindow.cpp",
 			"MU",
 			null
-		]
+		],
+		[ "/home/gor/programming_projects/CLIPainter/rectangle.cpp", "MU", null ]
 	],
 	"UIC_OPTIONS" : [],
 	"UIC_SEARCH_PATHS" : [],

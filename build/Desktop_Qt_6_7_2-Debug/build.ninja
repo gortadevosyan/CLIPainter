@@ -89,6 +89,30 @@ build CMakeFiles/CLIPainter.dir/line.cpp.o: CXX_COMPILER__CLIPainter_unscanned_D
   OBJECT_DIR = CMakeFiles/CLIPainter.dir
   OBJECT_FILE_DIR = CMakeFiles/CLIPainter.dir
 
+build CMakeFiles/CLIPainter.dir/rectangle.cpp.o: CXX_COMPILER__CLIPainter_unscanned_Debug /home/gor/programming_projects/CLIPainter/rectangle.cpp || cmake_object_order_depends_target_CLIPainter
+  DEFINES = -DQT_CORE_LIB -DQT_GUI_LIB -DQT_WIDGETS_LIB
+  DEP_FILE = CMakeFiles/CLIPainter.dir/rectangle.cpp.o.d
+  FLAGS = -DQT_QML_DEBUG -g -std=gnu++17 -fcolor-diagnostics -fPIC
+  INCLUDES = -I/home/gor/programming_projects/CLIPainter/build/Desktop_Qt_6_7_2-Debug/CLIPainter_autogen/include -isystem /home/gor/Qt/6.7.2/gcc_64/include/QtCore -isystem /home/gor/Qt/6.7.2/gcc_64/include -isystem /home/gor/Qt/6.7.2/gcc_64/mkspecs/linux-g++ -isystem /home/gor/Qt/6.7.2/gcc_64/include/QtWidgets -isystem /home/gor/Qt/6.7.2/gcc_64/include/QtGui
+  OBJECT_DIR = CMakeFiles/CLIPainter.dir
+  OBJECT_FILE_DIR = CMakeFiles/CLIPainter.dir
+
+build CMakeFiles/CLIPainter.dir/lineitem.cpp.o: CXX_COMPILER__CLIPainter_unscanned_Debug /home/gor/programming_projects/CLIPainter/lineitem.cpp || cmake_object_order_depends_target_CLIPainter
+  DEFINES = -DQT_CORE_LIB -DQT_GUI_LIB -DQT_WIDGETS_LIB
+  DEP_FILE = CMakeFiles/CLIPainter.dir/lineitem.cpp.o.d
+  FLAGS = -DQT_QML_DEBUG -g -std=gnu++17 -fcolor-diagnostics -fPIC
+  INCLUDES = -I/home/gor/programming_projects/CLIPainter/build/Desktop_Qt_6_7_2-Debug/CLIPainter_autogen/include -isystem /home/gor/Qt/6.7.2/gcc_64/include/QtCore -isystem /home/gor/Qt/6.7.2/gcc_64/include -isystem /home/gor/Qt/6.7.2/gcc_64/mkspecs/linux-g++ -isystem /home/gor/Qt/6.7.2/gcc_64/include/QtWidgets -isystem /home/gor/Qt/6.7.2/gcc_64/include/QtGui
+  OBJECT_DIR = CMakeFiles/CLIPainter.dir
+  OBJECT_FILE_DIR = CMakeFiles/CLIPainter.dir
+
+build CMakeFiles/CLIPainter.dir/basegraphicsitem.cpp.o: CXX_COMPILER__CLIPainter_unscanned_Debug /home/gor/programming_projects/CLIPainter/basegraphicsitem.cpp || cmake_object_order_depends_target_CLIPainter
+  DEFINES = -DQT_CORE_LIB -DQT_GUI_LIB -DQT_WIDGETS_LIB
+  DEP_FILE = CMakeFiles/CLIPainter.dir/basegraphicsitem.cpp.o.d
+  FLAGS = -DQT_QML_DEBUG -g -std=gnu++17 -fcolor-diagnostics -fPIC
+  INCLUDES = -I/home/gor/programming_projects/CLIPainter/build/Desktop_Qt_6_7_2-Debug/CLIPainter_autogen/include -isystem /home/gor/Qt/6.7.2/gcc_64/include/QtCore -isystem /home/gor/Qt/6.7.2/gcc_64/include -isystem /home/gor/Qt/6.7.2/gcc_64/mkspecs/linux-g++ -isystem /home/gor/Qt/6.7.2/gcc_64/include/QtWidgets -isystem /home/gor/Qt/6.7.2/gcc_64/include/QtGui
+  OBJECT_DIR = CMakeFiles/CLIPainter.dir
+  OBJECT_FILE_DIR = CMakeFiles/CLIPainter.dir
+
 
 # =============================================================================
 # Link build statements for EXECUTABLE target CLIPainter
@@ -97,7 +121,7 @@ build CMakeFiles/CLIPainter.dir/line.cpp.o: CXX_COMPILER__CLIPainter_unscanned_D
 #############################################
 # Link the executable CLIPainter
 
-build CLIPainter: CXX_EXECUTABLE_LINKER__CLIPainter_Debug CMakeFiles/CLIPainter.dir/CLIPainter_autogen/mocs_compilation.cpp.o CMakeFiles/CLIPainter.dir/main.cpp.o CMakeFiles/CLIPainter.dir/mainwindow.cpp.o CMakeFiles/CLIPainter.dir/commandMessageHandler.cpp.o CMakeFiles/CLIPainter.dir/line.cpp.o | /home/gor/Qt/6.7.2/gcc_64/lib/libQt6Widgets.so.6.7.2 /home/gor/Qt/6.7.2/gcc_64/lib/libQt6Gui.so.6.7.2 /home/gor/Qt/6.7.2/gcc_64/lib/libQt6Core.so.6.7.2 /usr/lib/x86_64-linux-gnu/libGLX.so /usr/lib/x86_64-linux-gnu/libOpenGL.so || CLIPainter_autogen CLIPainter_autogen_timestamp_deps
+build CLIPainter: CXX_EXECUTABLE_LINKER__CLIPainter_Debug CMakeFiles/CLIPainter.dir/CLIPainter_autogen/mocs_compilation.cpp.o CMakeFiles/CLIPainter.dir/main.cpp.o CMakeFiles/CLIPainter.dir/mainwindow.cpp.o CMakeFiles/CLIPainter.dir/commandMessageHandler.cpp.o CMakeFiles/CLIPainter.dir/line.cpp.o CMakeFiles/CLIPainter.dir/rectangle.cpp.o CMakeFiles/CLIPainter.dir/lineitem.cpp.o CMakeFiles/CLIPainter.dir/basegraphicsitem.cpp.o | /home/gor/Qt/6.7.2/gcc_64/lib/libQt6Widgets.so.6.7.2 /home/gor/Qt/6.7.2/gcc_64/lib/libQt6Gui.so.6.7.2 /home/gor/Qt/6.7.2/gcc_64/lib/libQt6Core.so.6.7.2 /usr/lib/x86_64-linux-gnu/libGLX.so /usr/lib/x86_64-linux-gnu/libOpenGL.so || CLIPainter_autogen CLIPainter_autogen_timestamp_deps
   FLAGS = -DQT_QML_DEBUG -g
   LINK_LIBRARIES = -Wl,-rpath,/home/gor/Qt/6.7.2/gcc_64/lib:  /home/gor/Qt/6.7.2/gcc_64/lib/libQt6Widgets.so.6.7.2  /home/gor/Qt/6.7.2/gcc_64/lib/libQt6Gui.so.6.7.2  /home/gor/Qt/6.7.2/gcc_64/lib/libQt6Core.so.6.7.2  /usr/lib/x86_64-linux-gnu/libGLX.so  /usr/lib/x86_64-linux-gnu/libOpenGL.so
   OBJECT_DIR = CMakeFiles/CLIPainter.dir

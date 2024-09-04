@@ -2,7 +2,8 @@
 #define MAINWINDOW_H
 
 #include <QMainWindow>
-
+#include <QGraphicsScene>
+#include <QVBoxLayout>
 QT_BEGIN_NAMESPACE
 namespace Ui {
 class MainWindow;
@@ -16,11 +17,14 @@ class MainWindow : public QMainWindow
 public:
     MainWindow(QWidget *parent = nullptr);
     ~MainWindow();
-
+    void addObjectToScene(QGraphicsItem *item);
+    void removeObjectFromScene(QGraphicsItem *item);
 private slots:
     void on_commandLineText_returnPressed();
-    //void resizeEvent(QResizeEvent* event) override;
 private:
     Ui::MainWindow *ui;
+    QGraphicsScene *scene;
+    QWidget *cWidget;
+    QVBoxLayout *layout;
 };
 #endif // MAINWINDOW_H

@@ -71,13 +71,13 @@
 			{
 				"command" : 4,
 				"file" : 1,
-				"line" : 65,
+				"line" : 69,
 				"parent" : 0
 			},
 			{
 				"command" : 5,
 				"file" : 1,
-				"line" : 48,
+				"line" : 52,
 				"parent" : 0
 			},
 			{
@@ -285,7 +285,11 @@
 				0,
 				1,
 				2,
-				5
+				5,
+				8,
+				10,
+				12,
+				14
 			]
 		}
 	],
@@ -374,7 +378,11 @@
 				0,
 				1,
 				2,
-				5
+				5,
+				8,
+				10,
+				12,
+				14
 			]
 		},
 		{
@@ -383,7 +391,11 @@
 			[
 				3,
 				6,
-				7
+				7,
+				9,
+				11,
+				13,
+				15
 			]
 		},
 		{
@@ -391,14 +403,14 @@
 			"sourceIndexes" : 
 			[
 				4,
-				8
+				16
 			]
 		},
 		{
 			"name" : "CMake Rules",
 			"sourceIndexes" : 
 			[
-				9
+				17
 			]
 		}
 	],
@@ -443,6 +455,50 @@
 			"backtrace" : 4,
 			"path" : "geometriciobject.h",
 			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 4,
+			"path" : "line.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 4,
+			"compileGroupIndex" : 0,
+			"path" : "line.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 4,
+			"path" : "rectangle.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 4,
+			"compileGroupIndex" : 0,
+			"path" : "rectangle.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 4,
+			"path" : "linegraphicsitem.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 4,
+			"compileGroupIndex" : 0,
+			"path" : "linegraphicsitem.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 4,
+			"path" : "basegraphicsitem.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 4,
+			"compileGroupIndex" : 0,
+			"path" : "basegraphicsitem.cpp",
+			"sourceGroupIndex" : 0
 		},
 		{
 			"backtrace" : 0,
