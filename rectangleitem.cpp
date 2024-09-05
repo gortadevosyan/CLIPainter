@@ -7,7 +7,7 @@ RectangleItem::RectangleItem(qreal x1, qreal y1, qreal x2, qreal y2, QGraphicsOb
     qreal height = abs(y2-y1);
     qreal topLeftX, topLeftY;
     //top left corner corresponds to (0,0), +x direction is to the right, -y direction is downwards
-    if(x1<x2 && (x1==x2 && y1<y2)){
+    if(x1<x2 || (x1==x2 && y1<y2)){
         topLeftX = x1, topLeftY = y1;
     }
     else {
