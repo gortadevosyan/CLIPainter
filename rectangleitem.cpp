@@ -1,7 +1,7 @@
 #include "rectangleitem.h"
 
 RectangleItem::RectangleItem(qreal x1, qreal y1, qreal x2, qreal y2, QGraphicsObject *parent, QString name):
-    BaseGraphicsItem(name, parent)
+    PolygonItem(name, parent)
 {
     qreal width = abs(x2-x1);
     qreal height = abs(y2-y1);
@@ -15,11 +15,11 @@ RectangleItem::RectangleItem(qreal x1, qreal y1, qreal x2, qreal y2, QGraphicsOb
     }
     //TODO: Throw INVALID INPUT exceptio or some error message because the two points coincide
     QRectF rect = QRectF(topLeftX, topLeftY, width, height);
-    poly = new QGraphicsPolygonItem(rect, parent);
+    PolygonItem::setPolygon(new QGraphicsPolygonItem(rect, parent));
 }
 
 RectangleItem::RectangleItem(qreal x1, qreal y1, qreal x2, qreal y2, qreal x3, qreal y3, qreal x4, qreal y4, QGraphicsItem *parent, QString name):
-    BaseGraphicsItem(name, parent)
+    PolygonItem(name, parent)
 {
     qreal diagonal1, diagonal2;
     diagonal1 = (x1-x3)*(x1-x3) + (y1-y3)*(y1-y3);
@@ -32,17 +32,6 @@ RectangleItem::RectangleItem(qreal x1, qreal y1, qreal x2, qreal y2, qreal x3, q
     points.push_back(QPointF(x2, y2));
     points.push_back(QPointF(x3, y3));
     points.push_back(QPointF(x4, y4));
-    poly = new QGraphicsPolygonItem(QPolygonF(points));
+    PolygonItem::setPolygon(new QGraphicsPolygonItem(QPolygonF(points)));
 }
-void RectangleItem::paint(QPainter *painter, const QStyleOptionGraphicsItem *option, QWidget *widget){
-    poly->setBrush(Qt::blue);
-    poly->paint(painter, option, widget);
-    BaseGraphicsItem::paint(painter, option, widget);
-}
-QRectF RectangleItem::boundingRect() const{
-    return poly->boundingRect();
-}
-
-RectangleItem::~RectangleItem(){
-    delete poly;
-}
+RectangleItem::~RectangleItem() {}

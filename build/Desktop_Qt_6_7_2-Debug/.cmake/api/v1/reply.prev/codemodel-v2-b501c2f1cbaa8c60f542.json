@@ -7,7 +7,7 @@
 				{
 					"build" : ".",
 					"hasInstallRule" : true,
-					"jsonFile" : "directory-.-Debug-c1ab2ff60130c04ece6f.json",
+					"jsonFile" : "directory-.-Debug-d3307283ab74e4c49d1a.json",
 					"minimumCMakeVersion" : 
 					{
 						"string" : "3.16"
@@ -44,7 +44,7 @@
 				{
 					"directoryIndex" : 0,
 					"id" : "CLIPainter::@6890427a1f51a3e7e1df",
-					"jsonFile" : "target-CLIPainter-Debug-8f606b2e54e0448f26e6.json",
+					"jsonFile" : "target-CLIPainter-Debug-090025cf27324773baf3.json",
 					"name" : "CLIPainter",
 					"projectIndex" : 0
 				},

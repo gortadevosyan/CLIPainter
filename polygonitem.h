@@ -6,16 +6,22 @@
 class PolygonItem : public BaseGraphicsItem
 {
 public:
-    PolygonItem(QString name = NULL, QGraphicsItem *parent = nullptr) :
-        BaseGraphicsItem(name, parent){}
-    virtual ~PolygonItem();
+    PolygonItem(QString name, QGraphicsItem *parent):
+        BaseGraphicsItem(name, parent){};
     void paint(QPainter *painter, const QStyleOptionGraphicsItem *option, QWidget *widget) override{
         poly->setBrush(Qt::blue);
         poly->paint(painter, option, widget);
         BaseGraphicsItem::paint(painter, option, widget);
     }
-    virtual QRectF boundingRect() const override{
+    QRectF boundingRect() const override{
         return poly->boundingRect();
+    }
+    virtual ~PolygonItem(){
+        delete poly;
+    }
+protected:
+    void setPolygon(QGraphicsPolygonItem *newPoly){
+        poly = newPoly;
     }
 private:
     QGraphicsPolygonItem *poly;

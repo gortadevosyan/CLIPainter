@@ -1,17 +1,13 @@
 #ifndef TRIANGLEITEM_H
 #define TRIANGLEITEM_H
 
-#include "basegraphicsitem.h"
+#include "polygonitem.h"
 
-class TriangleItem : public BaseGraphicsItem
+class TriangleItem : public PolygonItem
 {
 public:
     TriangleItem(qreal x1, qreal y1, qreal x2, qreal y2, qreal x3, qreal y3, QGraphicsItem *parent = nullptr, QString name = NULL);
-    ~TriangleItem();
-    void paint(QPainter *painter, const QStyleOptionGraphicsItem *option, QWidget *widget) override;
-    virtual QRectF boundingRect() const override;
-private:
-    QGraphicsPolygonItem *poly;
+    virtual ~TriangleItem();
 };
 
 #endif // TRIANGLEITEM_H

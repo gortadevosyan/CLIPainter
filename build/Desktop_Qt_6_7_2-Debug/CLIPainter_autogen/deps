@@ -420,6 +420,8 @@ CLIPainter_autogen/timestamp: \
 	/home/gor/programming_projects/CLIPainter/main.cpp \
 	/home/gor/programming_projects/CLIPainter/mainwindow.cpp \
 	/home/gor/programming_projects/CLIPainter/mainwindow.h \
+	/home/gor/programming_projects/CLIPainter/polygonitem.cpp \
+	/home/gor/programming_projects/CLIPainter/polygonitem.h \
 	/home/gor/programming_projects/CLIPainter/rectangleitem.cpp \
 	/home/gor/programming_projects/CLIPainter/rectangleitem.h \
 	/home/gor/programming_projects/CLIPainter/squareitem.cpp \

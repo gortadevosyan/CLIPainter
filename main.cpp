@@ -1,12 +1,12 @@
 #include "mainwindow.h"
 
 #include <QApplication>
-#include <QGraphicsLineItem>
 #include <QGraphicsItem>
+#include <QGraphicsLineItem>
 #include "lineitem.h"
-#include "triangleitem.h"
-#include "squareitem.h"
 #include "rectangleitem.h"
+#include "squareitem.h"
+#include "triangleitem.h"
 int main(int argc, char *argv[])
 {
     QApplication a(argc, argv);
@@ -23,5 +23,4 @@ int main(int argc, char *argv[])
     w.addObjectToScene(rect_2);
     w.addObjectToScene(rect_3);
     return a.exec();
-
 }
