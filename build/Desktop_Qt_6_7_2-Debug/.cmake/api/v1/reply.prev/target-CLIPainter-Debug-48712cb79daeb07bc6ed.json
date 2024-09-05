@@ -71,13 +71,13 @@
 			{
 				"command" : 4,
 				"file" : 1,
-				"line" : 69,
+				"line" : 71,
 				"parent" : 0
 			},
 			{
 				"command" : 5,
 				"file" : 1,
-				"line" : 52,
+				"line" : 54,
 				"parent" : 0
 			},
 			{
@@ -287,7 +287,9 @@
 				2,
 				5,
 				7,
-				9
+				9,
+				11,
+				13
 			]
 		}
 	],
@@ -378,7 +380,9 @@
 				2,
 				5,
 				7,
-				9
+				9,
+				11,
+				13
 			]
 		},
 		{
@@ -388,7 +392,9 @@
 				3,
 				6,
 				8,
-				10
+				10,
+				12,
+				14
 			]
 		},
 		{
@@ -396,14 +402,14 @@
 			"sourceIndexes" : 
 			[
 				4,
-				11
+				15
 			]
 		},
 		{
 			"name" : "CMake Rules",
 			"sourceIndexes" : 
 			[
-				12
+				16
 			]
 		}
 	],
@@ -464,6 +470,28 @@
 			"backtrace" : 4,
 			"compileGroupIndex" : 0,
 			"path" : "basegraphicsitem.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 4,
+			"path" : "rectangleitem.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 4,
+			"compileGroupIndex" : 0,
+			"path" : "rectangleitem.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 4,
+			"path" : "squareitem.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 4,
+			"compileGroupIndex" : 0,
+			"path" : "squareitem.cpp",
 			"sourceGroupIndex" : 0
 		},
 		{

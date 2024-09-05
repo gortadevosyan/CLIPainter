@@ -389,6 +389,18 @@
 			"MU",
 			"EWIEGA46WW/moc_rectangleitem.cpp",
 			null
+		],
+		[
+			"/home/gor/programming_projects/CLIPainter/squareitem.h",
+			"MU",
+			"EWIEGA46WW/moc_squareitem.cpp",
+			null
+		],
+		[
+			"/home/gor/programming_projects/CLIPainter/triangleitem.h",
+			"MU",
+			"EWIEGA46WW/moc_triangleitem.cpp",
+			null
 		]
 	],
 	"HEADER_EXTENSIONS" : [ "h", "hh", "h++", "hm", "hpp", "hxx", "in", "txx" ],
@@ -469,6 +481,16 @@
 		],
 		[
 			"/home/gor/programming_projects/CLIPainter/rectangleitem.cpp",
+			"MU",
+			null
+		],
+		[
+			"/home/gor/programming_projects/CLIPainter/squareitem.cpp",
+			"MU",
+			null
+		],
+		[
+			"/home/gor/programming_projects/CLIPainter/triangleitem.cpp",
 			"MU",
 			null
 		]
