@@ -1,5 +1,7 @@
 /home/gor/programming_projects/CLIPainter/build/Desktop_Qt_6_7_2-Debug/CLIPainter_autogen/EWIEGA46WW/moc_mainwindow.cpp: /home/gor/programming_projects/CLIPainter/mainwindow.h \
   /home/gor/programming_projects/CLIPainter/build/Desktop_Qt_6_7_2-Debug/CLIPainter_autogen/moc_predefs.h \
+  /home/gor/Qt/6.7.2/gcc_64/include/QtCore/QObject \
+  /home/gor/Qt/6.7.2/gcc_64/include/QtCore/QString \
   /home/gor/Qt/6.7.2/gcc_64/include/QtCore/q20functional.h \
   /home/gor/Qt/6.7.2/gcc_64/include/QtCore/q20memory.h \
   /home/gor/Qt/6.7.2/gcc_64/include/QtCore/q20type_traits.h \
@@ -129,6 +131,8 @@
   /home/gor/Qt/6.7.2/gcc_64/include/QtGui/qimage.h \
   /home/gor/Qt/6.7.2/gcc_64/include/QtGui/qkeysequence.h \
   /home/gor/Qt/6.7.2/gcc_64/include/QtGui/qpaintdevice.h \
+  /home/gor/Qt/6.7.2/gcc_64/include/QtGui/qpainter.h \
+  /home/gor/Qt/6.7.2/gcc_64/include/QtGui/qpainterpath.h \
   /home/gor/Qt/6.7.2/gcc_64/include/QtGui/qpalette.h \
   /home/gor/Qt/6.7.2/gcc_64/include/QtGui/qpen.h \
   /home/gor/Qt/6.7.2/gcc_64/include/QtGui/qpixelformat.h \
@@ -137,15 +141,18 @@
   /home/gor/Qt/6.7.2/gcc_64/include/QtGui/qregion.h \
   /home/gor/Qt/6.7.2/gcc_64/include/QtGui/qrgb.h \
   /home/gor/Qt/6.7.2/gcc_64/include/QtGui/qrgba64.h \
+  /home/gor/Qt/6.7.2/gcc_64/include/QtGui/qtextoption.h \
   /home/gor/Qt/6.7.2/gcc_64/include/QtGui/qtgui-config.h \
   /home/gor/Qt/6.7.2/gcc_64/include/QtGui/qtguiexports.h \
   /home/gor/Qt/6.7.2/gcc_64/include/QtGui/qtguiglobal.h \
   /home/gor/Qt/6.7.2/gcc_64/include/QtGui/qtransform.h \
   /home/gor/Qt/6.7.2/gcc_64/include/QtGui/qwindowdefs.h \
+  /home/gor/Qt/6.7.2/gcc_64/include/QtWidgets/QGraphicsItem \
   /home/gor/Qt/6.7.2/gcc_64/include/QtWidgets/QGraphicsScene \
   /home/gor/Qt/6.7.2/gcc_64/include/QtWidgets/QMainWindow \
   /home/gor/Qt/6.7.2/gcc_64/include/QtWidgets/QVBoxLayout \
   /home/gor/Qt/6.7.2/gcc_64/include/QtWidgets/qboxlayout.h \
+  /home/gor/Qt/6.7.2/gcc_64/include/QtWidgets/qgraphicsitem.h \
   /home/gor/Qt/6.7.2/gcc_64/include/QtWidgets/qgraphicsscene.h \
   /home/gor/Qt/6.7.2/gcc_64/include/QtWidgets/qgridlayout.h \
   /home/gor/Qt/6.7.2/gcc_64/include/QtWidgets/qlayout.h \
@@ -157,6 +164,9 @@
   /home/gor/Qt/6.7.2/gcc_64/include/QtWidgets/qtwidgetsexports.h \
   /home/gor/Qt/6.7.2/gcc_64/include/QtWidgets/qtwidgetsglobal.h \
   /home/gor/Qt/6.7.2/gcc_64/include/QtWidgets/qwidget.h \
+  /home/gor/programming_projects/CLIPainter/basegraphicsitem.h \
+  /home/gor/programming_projects/CLIPainter/canvas.h \
+  /home/gor/programming_projects/CLIPainter/commandmessagehandler.h \
   /usr/include/alloca.h \
   /usr/include/asm-generic/errno-base.h \
   /usr/include/asm-generic/errno.h \

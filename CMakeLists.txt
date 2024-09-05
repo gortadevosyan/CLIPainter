@@ -23,7 +23,7 @@ if(${QT_VERSION_MAJOR} GREATER_EQUAL 6)
     qt_add_executable(CLIPainter
         MANUAL_FINALIZATION
         ${PROJECT_SOURCES}
-        commandMessageHandler.cpp
+
 
 
 
@@ -33,6 +33,8 @@ if(${QT_VERSION_MAJOR} GREATER_EQUAL 6)
         squareitem.h squareitem.cpp
         triangleitem.h triangleitem.cpp
         polygonitem.h polygonitem.cpp
+        commandmessagehandler.h commandmessagehandler.cpp
+        canvas.h canvas.cpp
 
 
     )
