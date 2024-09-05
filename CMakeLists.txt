@@ -32,6 +32,7 @@ if(${QT_VERSION_MAJOR} GREATER_EQUAL 6)
         rectangleitem.h rectangleitem.cpp
         squareitem.h squareitem.cpp
         triangleitem.h triangleitem.cpp
+        polygonitem.h polygonitem.cpp
 
     )
 # Define target properties for Android with Qt 6 as:

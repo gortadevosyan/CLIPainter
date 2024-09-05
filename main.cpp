@@ -4,7 +4,7 @@
 #include <QGraphicsLineItem>
 #include <QGraphicsItem>
 #include "lineitem.h"
-#include "basegraphicsitem.h"
+#include "triangleitem.h"
 #include "squareitem.h"
 #include "rectangleitem.h"
 int main(int argc, char *argv[])
@@ -16,6 +16,8 @@ int main(int argc, char *argv[])
     RectangleItem *rect_2 = new RectangleItem(10, 10, 100, 20, nullptr, "rect_1");
     RectangleItem *rect_3 = new RectangleItem(10, 10, 100, 10, 100, 20, 10, 20, nullptr, "rect_3");
     SquareItem *square = new SquareItem(200, 200, 300, 300, nullptr, "SQUARE!!!!!");
+    TriangleItem *tri = new TriangleItem(40, 50, 82, 89, 409, 302, nullptr, "triangle_1");
+    w.addObjectToScene(tri);
     w.addObjectToScene(square);
     w.addObjectToScene(line);
     w.addObjectToScene(rect_2);

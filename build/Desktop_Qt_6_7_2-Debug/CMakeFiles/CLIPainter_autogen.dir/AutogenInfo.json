@@ -385,6 +385,12 @@
 			null
 		],
 		[
+			"/home/gor/programming_projects/CLIPainter/polygonitem.h",
+			"MU",
+			"EWIEGA46WW/moc_polygonitem.cpp",
+			null
+		],
+		[
 			"/home/gor/programming_projects/CLIPainter/rectangleitem.h",
 			"MU",
 			"EWIEGA46WW/moc_rectangleitem.cpp",
@@ -476,6 +482,11 @@
 		[ "/home/gor/programming_projects/CLIPainter/main.cpp", "MU", null ],
 		[
 			"/home/gor/programming_projects/CLIPainter/mainwindow.cpp",
+			"MU",
+			null
+		],
+		[
+			"/home/gor/programming_projects/CLIPainter/polygonitem.cpp",
 			"MU",
 			null
 		],

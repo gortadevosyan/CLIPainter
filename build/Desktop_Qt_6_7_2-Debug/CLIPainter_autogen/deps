@@ -424,6 +424,8 @@ CLIPainter_autogen/timestamp: \
 	/home/gor/programming_projects/CLIPainter/rectangleitem.h \
 	/home/gor/programming_projects/CLIPainter/squareitem.cpp \
 	/home/gor/programming_projects/CLIPainter/squareitem.h \
+	/home/gor/programming_projects/CLIPainter/triangleitem.cpp \
+	/home/gor/programming_projects/CLIPainter/triangleitem.h \
 	/usr/include/alloca.h \
 	/usr/include/asm-generic/errno-base.h \
 	/usr/include/asm-generic/errno.h \
