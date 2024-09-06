@@ -7,17 +7,22 @@ class CommandMessageHandler : public QObject
     Q_OBJECT
 public:
     CommandMessageHandler(QObject *parent = nullptr) : QObject(parent){}
-    static QString handleCommand(QString command);
-    static QString handleCreateCommand(QStringList list);
-    static QString handleConnectCommand(QStringList list);
-    static QString handleExecuteCommand(QStringList list);
+    QString handleCommand(QString command);
+    QString handleCreateCommand(QStringList &list);
+    QString handleConnectCommand(QStringList &list);
+    QString handleExecuteCommand(QStringList &list);
+    QString handleCreateLineCommand(QStringList &list);
+    QString handleCreateRectangleCommand(QStringList &list);
+    QString handleCreateSquareCommand(QStringList &list);
+    QString handleCreateTriangleCommand(QStringList &list);
 signals:
-    void lineRequested();
-    void rectangleRequested();
+    void lineRequested(QString name, qreal x1, qreal y1, qreal x2, qreal y2);
+    void rectangleRequested(QString name, qreal x1, qreal y1, qreal x2, qreal y2);
     void squareRequested();
     void triangleRequested();
     void connectRequested();
-
+private:
+    QString errMessage = "Invalid Command";
 };
 
 #endif // COMMANDMESSAGEHANDLER_H

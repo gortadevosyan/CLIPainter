@@ -54,9 +54,7 @@ void MainWindow::on_commandLineText_returnPressed()
 {
     QString command = ui->commandLineText->text();
     ui->commandLineText->clear();
-    if(isCommandMessageValid(command))
-        ui->logTextEdit->append(command);
-    else ui->logTextEdit->append("WRONG COMMAND");
+    ui->logTextEdit->append(canvas->processCommand(command));
 }
 
 //TODO remove the obsolete functions, keep the slots only
