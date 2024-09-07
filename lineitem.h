@@ -14,8 +14,8 @@ public:
         line = new QGraphicsLineItem(x1, y1, x2, y2, parent);
     }
     void paint(QPainter *painter, const QStyleOptionGraphicsItem *option, QWidget *widget) override {
-        BaseGraphicsItem::paint(painter, option, widget);
         line->paint(painter, option, widget);
+        BaseGraphicsItem::paint(painter, option, widget);
     }
     QRectF boundingRect() const override {
         return line->boundingRect();
