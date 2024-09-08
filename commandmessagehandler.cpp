@@ -207,9 +207,47 @@ QString CommandMessageHandler::handleCreateTriangleCommand(QStringList &list, QS
     return "Success, triangle will be created";
 }
 
-QString CommandMessageHandler::handleConnectCommand(QStringList &list){
-    //TODO
-    return NULL;
+QString CommandMessageHandler::handleConnectCommand(QStringList &commandList){
+    QString firstCommand = commandList.first();
+
+    commandList.removeFirst();//remove the first command from the list to access name parameter
+
+    QString name1 = NULL; //set the default value to name, if it is not updated, later an error message will be printed
+    QString name2 = NULL;
+    //parse name paramter
+    if(commandList.first()=="-object_name_1"){
+        commandList.removeFirst();
+        name1 = commandList.first();
+        commandList.removeFirst();
+        //removes obsolete braces from the name
+        if(name1.endsWith('}') && name1.startsWith('{')){
+            name1.removeFirst();
+            name1.removeLast();
+        }
+    }
+    else return "Invalid argument, object_name_1 expected";
+    if(commandList.first()=="-object_name_2"){
+        commandList.removeFirst();
+        name2 = commandList.first();
+        commandList.removeFirst();
+        //removes obsolete braces from the name
+        if(name2.endsWith('}') && name2.startsWith('{')){
+            name2.removeFirst();
+            name2.removeLast();
+        }
+    }
+    else return "Invalid argument, object_name_2 expected";
+
+    if(!Canvas::isNameUsed(name1))
+        return "No object with name_1 exists";
+    if(!Canvas::isNameUsed(name2))
+        return "No object with name_2 exists";
+    if(name1 == name2)
+        return "Can not connect the object to itself";
+
+    emit(connectRequested(name1, name2));
+
+    return "Success, objects will be connected";
 }
 QString  CommandMessageHandler::handleExecuteCommand(QStringList &list){
     //TODO

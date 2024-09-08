@@ -25,7 +25,7 @@ signals:
     void squareRequested_4(QString name, qreal x1, qreal y1, qreal x2, qreal y2, qreal x3, qreal y3, qreal x4, qreal y4);
     void squareRequested(QString name, qreal x1, qreal y1, qreal x2, qreal y2);
     void triangleRequested(QString name, qreal x1, qreal y1, qreal x2, qreal y2, qreal x3, qreal y3);
-    void connectRequested();
+    void connectRequested(QString name1, QString name2);
 };
 
 #endif // COMMANDMESSAGEHANDLER_H

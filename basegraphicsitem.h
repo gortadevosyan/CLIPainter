@@ -18,7 +18,7 @@ public:
 protected:
     void paint(QPainter *painter, const QStyleOptionGraphicsItem *option, QWidget *widget) override {
         painter->setPen(Qt::black);
-        painter->setFont(QFont());
+        painter->setFont(QFont("Arial", 10));
         painter->drawText(boundingRect(), Qt::AlignCenter | Qt::AlignCenter, name);
     }
     void fill(QPainter *painter){

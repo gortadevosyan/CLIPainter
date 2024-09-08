@@ -22,6 +22,7 @@ public slots:
     void on_squareRequested_4(QString name, qreal x1, qreal y1, qreal x2, qreal y2, qreal x3, qreal y3, qreal x4, qreal y4);
     void on_squareRequested(QString name, qreal x1, qreal y1, qreal x2, qreal y2);
     void on_triangleRequested(QString name, qreal x1, qreal y1, qreal x2, qreal y2, qreal x3, qreal y3);
+    void on_connectRequested(QString name1, QString name2);
 private:
     CommandMessageHandler *handler;
     //questionable choice
