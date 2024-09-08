@@ -1,6 +1,7 @@
 #include "commandmessagehandler.h"
 #include <QString>
 #include <QtCore>
+#include "canvas.h"
 QString CommandMessageHandler::handleCommand(QString command){
     QStringList commandList = command.split(" ");
     QStringList firstCommand = commandList.first().split("_");
@@ -43,7 +44,8 @@ QString CommandMessageHandler::handleCreateCommand(QStringList &commandList){
     else return "Invalid create command";
 }
 
-//utility method
+//utility methods
+
 std::unique_ptr<QPointF> handlePointCreation(QStringList &list, int coordNo){
     auto ans = std::make_unique<QPointF>();
     qreal coordx, coordy;
@@ -63,23 +65,6 @@ std::unique_ptr<QPointF> handlePointCreation(QStringList &list, int coordNo){
     return ans;
 }
 
-
-QString CommandMessageHandler::handleCreateLineCommand(QStringList &list, QString name){
-    if(name.isNull())
-        return "Invalid formatting, name parameter expected";
-
-    auto coord1 = handlePointCreation(list, 1);
-    if(coord1 == nullptr)
-        return "Invalid formatting, -coord_1 parameter expected";
-
-    auto coord2 = handlePointCreation(list, 2);
-    if(coord2 == nullptr)
-        return "Invalid formatting, -coord_2 parameter expected";
-
-    emit(lineRequested(name, coord1->x(), coord1->y(), coord2->x(), coord2->y()));
-
-    return "Success, line will be created";
-}
 //with the flag isSquare = true the function checks whether the points form a square or not
 bool isValidRectangle(std::unique_ptr<QPointF> &coord1, std::unique_ptr<QPointF> &coord2, std::unique_ptr<QPointF> &coord3, std::unique_ptr<QPointF>  &coord4, bool isSquare = false){
     QPointF side1 = QPointF(coord1->x()-coord2->x(), coord1->y()-coord2->y());
@@ -95,9 +80,32 @@ bool isValidRectangle(std::unique_ptr<QPointF> &coord1, std::unique_ptr<QPointF>
     return true;
 }
 
+QString CommandMessageHandler::handleCreateLineCommand(QStringList &list, QString name){
+    if(name.isNull())
+        return "Invalid formatting, name parameter expected";
+
+    if(Canvas::isNameUsed(name))
+        return "An object with the same name exists";
+
+    auto coord1 = handlePointCreation(list, 1);
+    if(coord1 == nullptr)
+        return "Invalid formatting, -coord_1 parameter expected";
+
+    auto coord2 = handlePointCreation(list, 2);
+    if(coord2 == nullptr)
+        return "Invalid formatting, -coord_2 parameter expected";
+
+    emit(lineRequested(name, coord1->x(), coord1->y(), coord2->x(), coord2->y()));
+
+    return "Success, line will be created";
+}
+
 QString CommandMessageHandler::handleCreateRectangleCommand(QStringList &list, QString name){
     if(name.isNull())
         return "Invalid formatting, name parameter expected";
+
+    if(Canvas::isNameUsed(name))
+        return "An object with the same name exists";
 
     //extract the coordinates of point1
     auto coord1 = handlePointCreation(list, 1);
@@ -138,6 +146,9 @@ QString CommandMessageHandler::handleCreateSquareCommand(QStringList &list, QStr
     if(name.isNull())
         return "Invalid formatting, name parameter expected";
 
+    if(Canvas::isNameUsed(name))
+        return "An object with the same name exists";
+
     //extract the coordinates of point1
     auto coord1 = handlePointCreation(list, 1);
     if(coord1 == nullptr)
@@ -175,6 +186,9 @@ QString CommandMessageHandler::handleCreateSquareCommand(QStringList &list, QStr
 QString CommandMessageHandler::handleCreateTriangleCommand(QStringList &list, QString name){
     if(name.isNull())
         return "Invalid formatting, name parameter expected";
+
+    if(Canvas::isNameUsed(name))
+        return "An object with the same name exists";
 
     auto coord1 = handlePointCreation(list, 1);
     if(coord1== nullptr)

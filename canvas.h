@@ -9,7 +9,9 @@ class Canvas : public QObject
     Q_OBJECT
 public:
     explicit Canvas(QObject *parent = nullptr);
+    ~Canvas();
     QString processCommand(QString command);
+    static bool isNameUsed(QString name);
 signals:
     void objectAdded(QGraphicsItem *item);
     void objectRemoved(QGraphicsItem *item);
@@ -22,7 +24,8 @@ public slots:
     void on_triangleRequested(QString name, qreal x1, qreal y1, qreal x2, qreal y2, qreal x3, qreal y3);
 private:
     CommandMessageHandler *handler;
-    QHash<QString, BaseGraphicsItem*> map;
+    //questionable choice
+    static QHash<QString, BaseGraphicsItem*> map;
 };
 
 #endif // CANVAS_H
