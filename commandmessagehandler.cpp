@@ -24,6 +24,7 @@ QString CommandMessageHandler::handleCreateCommand(QStringList &commandList){
     if(commandList.first()=="-name"){
         commandList.removeFirst();
         name = commandList.first();
+        commandList.removeFirst();
         //removes obsolete braces from the name
         if(name.endsWith('}') && name.startsWith('{')){
             name.removeFirst();
@@ -47,16 +48,17 @@ QPointF handlePointCreation(QStringList &list, int coordNo){
     QPointF ans;
     qreal coordx, coordy;
     QString expectedArg = "-coord_" + QString::number(coordNo);
-    list.removeFirst();
     if(list.first() == expectedArg){
         list.removeFirst();
         QString coordTuple = list.first();
+        //remove the values of the point coordinates from the list
         coordTuple.removeFirst();
         coordTuple.removeLast();
         QStringList crds = coordTuple.split(',');
         coordx = crds.first().toDouble();
         coordy  = crds.last().toDouble();
         ans = QPointF(coordx, coordy);
+        list.removeFirst();
     }
     return ans;
 }
@@ -68,32 +70,66 @@ QString CommandMessageHandler::handleCreateLineCommand(QStringList &list, QStrin
 
     QPointF coord1 = handlePointCreation(list, 1);
     if(coord1.isNull())
-        return "Invalid formatting, -cord_1 parameter expected";
+        return "Invalid formatting, -coord_1 parameter expected";
 
     QPointF coord2 = handlePointCreation(list, 2);
     if(coord2.isNull())
-        return "Invalid formatting, -cord_2 parameter expected";
+        return "Invalid formatting, -coord_2 parameter expected";
 
     emit(lineRequested(name, coord1.x(), coord1.y(), coord2.x(), coord2.y()));
 
     return "Success, line will be created";
 }
 
+bool isValidRectangle(QPointF coord1, QPointF coord2, QPointF coord3, QPointF coord4){
+    QPointF diagonal1 = QPointF(coord1.x()-coord3.x(), coord1.y()-coord3.y());
+    QPointF diagonal2 = QPointF(coord2.x()-coord4.x(), coord2.y()-coord4.y());
+    if(QPointF::dotProduct(diagonal1, diagonal2)!=0)
+        return false;
+    if(QPointF::dotProduct(diagonal1, diagonal1)!=QPointF::dotProduct(diagonal2, diagonal2))
+        return false;
+    return true;
+}
+
+bool isValidSquare(QPointF coord1, QPointF coord2, QPointF coord3, QPointF coord4){
+    return isValidRectangle(coord1, coord2, coord3, coord4);
+}
 
 QString CommandMessageHandler::handleCreateRectangleCommand(QStringList &list, QString name){
     if(name.isNull())
         return "Invalid formatting, name parameter expected";
 
+    //extract the coordinates of point1
     QPointF coord1 = handlePointCreation(list, 1);
     if(coord1.isNull())
-        return "Invalid formatting, -cord_1 parameter expected";
+        return "Invalid formatting, -coord_1 parameter expected";
 
+    //extract the coordinates of point2
     QPointF coord2 = handlePointCreation(list, 2);
     if(coord2.isNull())
-        return "Invalid formatting, -cord_2 parameter expected";
+        return "Invalid formatting, -coord_2 parameter expected";
 
-    emit(rectangleRequested(name, coord1.x(), coord1.y(), coord2.x(), coord2.y()));
+    //check which constructor was used, 2 or 4 point one
+    if(list.isEmpty()){
+        emit(rectangleRequested(name, coord1.x(), coord1.y(), coord2.x(), coord2.y()));
+        return "Success, rectangle will be created";
+    }
 
+    //extract the coordinates of point3
+    QPointF coord3 = handlePointCreation(list, 3);
+    if(coord3.isNull())
+        return "Invalid formatting, -coord_3 parameter expected";
+
+    //extract the coordinates of point4
+    QPointF coord4 = handlePointCreation(list, 4);
+    if(coord3.isNull())
+        return "Invalid formatting, -coord_4 parameter expected";
+
+    //checks the correctness of the given points
+    if(!isValidRectangle(coord1, coord2, coord3, coord4))
+        return "Invalid command, given points do not form a rectangle";
+
+    emit(rectangleRequested_4(name, coord1.x(), coord1.y(), coord2.x(),coord2.y(), coord3.x(), coord3.y(), coord4.x(), coord4.y()));
     return "Success, rectangle will be created";
 }
 
@@ -115,7 +151,7 @@ QString CommandMessageHandler::handleCreateTriangleCommand(QStringList &list, QS
 
     QPointF coord3 = handlePointCreation(list, 3);
     if(coord2.isNull())
-        return "Invalid formatting, -cord_2 parameter expected";
+        return "Invalid formatting, -cord_3 parameter expected";
 
     emit(triangleRequested(name, coord1.x(), coord1.y(), coord2.x(), coord2.y(), coord3.x(), coord3.y()));
 
