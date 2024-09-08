@@ -410,6 +410,9 @@
  mdp:/usr/lib/llvm-14/lib/clang/14.0.0/include/stddef.h
 /home/gor/programming_projects/CLIPainter/line.cpp
 /home/gor/programming_projects/CLIPainter/polygonitem.cpp
+/home/gor/programming_projects/CLIPainter/basegraphicsitem.cpp
+/home/gor/programming_projects/CLIPainter/mainwindow.cpp
+ uic:./ui_mainwindow.h
 /home/gor/programming_projects/CLIPainter/canvas.h
  mmc:Q_OBJECT
  mdp:/home/gor/Qt/6.7.2/gcc_64/include/QtCore/QObject
@@ -817,10 +820,7 @@
  mdp:/usr/lib/llvm-14/lib/clang/14.0.0/include/stdarg.h
  mdp:/usr/lib/llvm-14/lib/clang/14.0.0/include/stdbool.h
  mdp:/usr/lib/llvm-14/lib/clang/14.0.0/include/stddef.h
-/home/gor/programming_projects/CLIPainter/mainwindow.cpp
- uic:./ui_mainwindow.h
-/home/gor/programming_projects/CLIPainter/basegraphicsitem.cpp
-/home/gor/programming_projects/CLIPainter/rectangleitem.h
+/home/gor/programming_projects/CLIPainter/main.cpp
 /home/gor/programming_projects/CLIPainter/commandmessagehandler.h
  mmc:Q_OBJECT
  mdp:/home/gor/Qt/6.7.2/gcc_64/include/QtCore/QObject
@@ -1179,10 +1179,10 @@
 /home/gor/programming_projects/CLIPainter/rectangleitem.cpp
 /home/gor/programming_projects/CLIPainter/squareitem.cpp
 /home/gor/programming_projects/CLIPainter/polygonitem.h
-/home/gor/programming_projects/CLIPainter/main.cpp
-/home/gor/programming_projects/CLIPainter/rectangle.cpp
-/home/gor/programming_projects/CLIPainter/triangleitem.cpp
+/home/gor/programming_projects/CLIPainter/rectangleitem.h
 /home/gor/programming_projects/CLIPainter/commandmessagehandler.cpp
+/home/gor/programming_projects/CLIPainter/triangleitem.cpp
+/home/gor/programming_projects/CLIPainter/rectangle.cpp
 /home/gor/programming_projects/CLIPainter/line.h
 /home/gor/programming_projects/CLIPainter/mainwindow.h
  mmc:Q_OBJECT
@@ -1610,5 +1610,5 @@
  mdp:/usr/lib/llvm-14/lib/clang/14.0.0/include/stdarg.h
  mdp:/usr/lib/llvm-14/lib/clang/14.0.0/include/stdbool.h
  mdp:/usr/lib/llvm-14/lib/clang/14.0.0/include/stddef.h
-/home/gor/programming_projects/CLIPainter/squareitem.h
 /home/gor/programming_projects/CLIPainter/canvas.cpp
+/home/gor/programming_projects/CLIPainter/squareitem.h

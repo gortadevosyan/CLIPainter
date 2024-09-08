@@ -26,8 +26,6 @@ signals:
     void squareRequested(QString name, qreal x1, qreal y1, qreal x2, qreal y2);
     void triangleRequested(QString name, qreal x1, qreal y1, qreal x2, qreal y2, qreal x3, qreal y3);
     void connectRequested();
-private:
-    QString errMessage = "Invalid Command";
 };
 
 #endif // COMMANDMESSAGEHANDLER_H
