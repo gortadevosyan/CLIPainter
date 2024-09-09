@@ -26,6 +26,11 @@ signals:
     void squareRequested(QString name, qreal x1, qreal y1, qreal x2, qreal y2);
     void triangleRequested(QString name, qreal x1, qreal y1, qreal x2, qreal y2, qreal x3, qreal y3);
     void connectRequested(QString name1, QString name2);
+private:
+    QString invalidCommandMessage = "Failed: invalid command";
+    QString duplicateNameMessage = "Failed: an object with the same name already exists";
+    QString parameterExpectedMessage = "parameter expected";
+    QString invalidFormattingMessage = "Failed: invalid formatting";
 };
 
 #endif // COMMANDMESSAGEHANDLER_H

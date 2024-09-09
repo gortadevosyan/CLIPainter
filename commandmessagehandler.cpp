@@ -11,7 +11,7 @@ QString CommandMessageHandler::handleCommand(QString command){
         return handleConnectCommand(commandList);
     else if(firstCommand.first()=="execute")
         return handleExecuteCommand(commandList);
-    else return "Invalid Command";
+    else return invalidCommandMessage;
 }
 
 QString CommandMessageHandler::handleCreateCommand(QStringList &commandList){
@@ -22,7 +22,7 @@ QString CommandMessageHandler::handleCreateCommand(QStringList &commandList){
     QString name = NULL; //set the default value to name, if it is not updated, later an error message will be printed
 
     //parse name paramter
-    if(commandList.first()=="-name"){
+    if(!commandList.isEmpty() && commandList.first()=="-name"){
         commandList.removeFirst();
         name = commandList.first();
         commandList.removeFirst();
@@ -41,7 +41,7 @@ QString CommandMessageHandler::handleCreateCommand(QStringList &commandList){
         return handleCreateSquareCommand(commandList, name);
     else if(firstCommand == "create_triangle")
         return handleCreateTriangleCommand(commandList, name);
-    else return "Invalid create command";
+    else return invalidCommandMessage;
 }
 
 //utility methods
@@ -50,19 +50,27 @@ std::unique_ptr<QPointF> handlePointCreation(QStringList &list, int coordNo){
     auto ans = std::make_unique<QPointF>();
     qreal coordx, coordy;
     QString expectedArg = "-coord_" + QString::number(coordNo);
-    if(list.first() == expectedArg){
+    if(list.size() >= 2 && list.first() == expectedArg){
         list.removeFirst();
         QString coordTuple = list.first();
         //remove the values of the point coordinates from the list
         coordTuple.removeFirst();
         coordTuple.removeLast();
         QStringList crds = coordTuple.split(',');
-        coordx = crds.first().toDouble();
-        coordy  = crds.last().toDouble();
+        if(crds.size() != 2) //invalid formatting
+            return nullptr;
+
+        bool xOk, yOk;
+        coordx = crds.first().toDouble(&xOk);
+        coordy  = crds.last().toDouble(&yOk);
+        if(!xOk || !yOk)
+            return nullptr;
+
         *ans = QPointF(coordx, coordy);
         list.removeFirst();
+        return ans;
     }
-    return ans;
+    return nullptr;
 }
 
 //with the flag isSquare = true the function checks whether the points form a square or not
@@ -82,134 +90,132 @@ bool isValidRectangle(std::unique_ptr<QPointF> &coord1, std::unique_ptr<QPointF>
 
 QString CommandMessageHandler::handleCreateLineCommand(QStringList &list, QString name){
     if(name.isNull())
-        return "Invalid formatting, name parameter expected";
+        return invalidFormattingMessage + " name " + parameterExpectedMessage;
 
     if(Canvas::isNameUsed(name))
-        return "An object with the same name exists";
+        return duplicateNameMessage;
 
     auto coord1 = handlePointCreation(list, 1);
     if(coord1 == nullptr)
-        return "Invalid formatting, -coord_1 parameter expected";
+        return invalidFormattingMessage + " -coord_1 " + parameterExpectedMessage;
 
     auto coord2 = handlePointCreation(list, 2);
     if(coord2 == nullptr)
-        return "Invalid formatting, -coord_2 parameter expected";
+        return invalidFormattingMessage +  " -coord_2 " + parameterExpectedMessage;
 
     emit(lineRequested(name, coord1->x(), coord1->y(), coord2->x(), coord2->y()));
 
-    return "Success, line will be created";
+    return "Success: line will be created";
 }
 
 QString CommandMessageHandler::handleCreateRectangleCommand(QStringList &list, QString name){
     if(name.isNull())
-        return "Invalid formatting, name parameter expected";
+        return invalidFormattingMessage +  " name " + parameterExpectedMessage;
 
     if(Canvas::isNameUsed(name))
-        return "An object with the same name exists";
+        return duplicateNameMessage;
 
     //extract the coordinates of point1
     auto coord1 = handlePointCreation(list, 1);
     if(coord1 == nullptr)
-        return "Invalid formatting, -coord_1 parameter expected";
+        return invalidFormattingMessage + " -coord_1 " + parameterExpectedMessage;
 
     //extract the coordinates of point2
     auto coord2 = handlePointCreation(list, 2);
     if(coord2== nullptr)
-        return "Invalid formatting, -coord_2 parameter expected";
+        return invalidFormattingMessage + " -coord_2 " + parameterExpectedMessage;
 
     //check which constructor was used, 2 or 4 point one
     if(list.isEmpty()){
         emit(rectangleRequested(name, coord1->x(), coord1->y(), coord2->x(), coord2->y()));
-        return "Success, rectangle will be created";
+        return "Success: rectangle will be created";
     }
 
     //extract the coordinates of point3
     auto coord3 = handlePointCreation(list, 3);
     if(coord3== nullptr)
-        return "Invalid formatting, -coord_3 parameter expected";
+        return invalidFormattingMessage + " -coord_3 " + parameterExpectedMessage;
 
     //extract the coordinates of point4
     auto coord4 = handlePointCreation(list, 4);
     if(coord3== nullptr)
-        return "Invalid formatting, -coord_4 parameter expected";
+        return invalidFormattingMessage + " -coord_4 " + parameterExpectedMessage;
 
     //checks the correctness of the given points
     if(!isValidRectangle(coord1, coord2, coord3, coord4))
-        return "Invalid command, given points do not form a rectangle";
+        return invalidCommandMessage + " given points do not form a rectangle";
 
     emit(rectangleRequested_4(name, coord1->x(), coord1->y(), coord2->x(),coord2->y(), coord3->x(), coord3->y(), coord4->x(), coord4->y()));
-    return "Success, rectangle will be created";
+    return "Success: rectangle will be created";
 }
 
 
 QString CommandMessageHandler::handleCreateSquareCommand(QStringList &list, QString name){
     if(name.isNull())
-        return "Invalid formatting, name parameter expected";
+        return invalidFormattingMessage + " name " + parameterExpectedMessage;
 
     if(Canvas::isNameUsed(name))
-        return "An object with the same name exists";
+        return duplicateNameMessage;
 
     //extract the coordinates of point1
     auto coord1 = handlePointCreation(list, 1);
     if(coord1 == nullptr)
-        return "Invalid formatting, -coord_1 parameter expected";
+        return invalidFormattingMessage + " -coord_1 " + parameterExpectedMessage;
 
     //extract the coordinates of point2
     auto coord2 = handlePointCreation(list, 2);
     if(coord2== nullptr)
-        return "Invalid formatting, -coord_2 parameter expected";
+        return invalidFormattingMessage + " -coord_2 " + parameterExpectedMessage;
 
     //check which constructor was used, 2 or 4 point one
     if(list.isEmpty()){
         emit(squareRequested(name, coord1->x(), coord1->y(), coord2->x(), coord2->y()));
-        return "Success, square will be created";
+        return "Success: square will be created";
     }
 
     //extract the coordinates of point3
     auto coord3 = handlePointCreation(list, 3);
     if(coord3== nullptr)
-        return "Invalid formatting, -coord_3 parameter expected";
+        return invalidFormattingMessage + " -coord_3 " + parameterExpectedMessage;
 
     //extract the coordinates of point4
     auto coord4 = handlePointCreation(list, 4);
     if(coord3== nullptr)
-        return "Invalid formatting, -coord_4 parameter expected";
+        return invalidFormattingMessage + " -coord_4 " + parameterExpectedMessage;
 
     //checks the correctness of the given points
     if(!isValidRectangle(coord1, coord2, coord3, coord4, true))
-        return "Invalid command, given points do not form a rectangle";
+        return invalidCommandMessage + ", given points do not form a rectangle";
 
     emit(squareRequested_4(name, coord1->x(), coord1->y(), coord2->x(),coord2->y(), coord3->x(), coord3->y(), coord4->x(), coord4->y()));
-    return "Success, rectangle will be created";
+    return "Success: rectangle will be created";
 }
 
 QString CommandMessageHandler::handleCreateTriangleCommand(QStringList &list, QString name){
     if(name.isNull())
-        return "Invalid formatting, name parameter expected";
+        return invalidFormattingMessage + " name " + parameterExpectedMessage;
 
     if(Canvas::isNameUsed(name))
-        return "An object with the same name exists";
+        return duplicateNameMessage;
 
     auto coord1 = handlePointCreation(list, 1);
     if(coord1== nullptr)
-        return "Invalid formatting, -cord_1 parameter expected";
+        return invalidFormattingMessage + " -coord_1 " + parameterExpectedMessage;
 
     auto coord2 = handlePointCreation(list, 2);
     if(coord2== nullptr)
-        return "Invalid formatting, -cord_2 parameter expected";
+        return invalidFormattingMessage + " -coord_2 " + parameterExpectedMessage;
 
     auto coord3 = handlePointCreation(list, 3);
     if(coord2== nullptr)
-        return "Invalid formatting, -cord_3 parameter expected";
+        return invalidFormattingMessage + " -coord_3 " + parameterExpectedMessage;
 
     emit(triangleRequested(name, coord1->x(), coord1->y(), coord2->x(), coord2->y(), coord3->x(), coord3->y()));
 
-    return "Success, triangle will be created";
+    return "Success: triangle will be created";
 }
 
 QString CommandMessageHandler::handleConnectCommand(QStringList &commandList){
-    QString firstCommand = commandList.first();
-
     commandList.removeFirst();//remove the first command from the list to access name parameter
 
     QString name1 = NULL; //set the default value to name, if it is not updated, later an error message will be printed
@@ -225,7 +231,7 @@ QString CommandMessageHandler::handleConnectCommand(QStringList &commandList){
             name1.removeLast();
         }
     }
-    else return "Invalid argument, object_name_1 expected";
+    else return "Failed: invalid argument, object_name_1 expected";
     if(commandList.first()=="-object_name_2"){
         commandList.removeFirst();
         name2 = commandList.first();
@@ -236,20 +242,28 @@ QString CommandMessageHandler::handleConnectCommand(QStringList &commandList){
             name2.removeLast();
         }
     }
-    else return "Invalid argument, object_name_2 expected";
+    else return "Failed: invalid argument, object_name_2 expected";
 
     if(!Canvas::isNameUsed(name1))
-        return "No object with name_1 exists";
+        return "Failed: no object with name_1 exists";
     if(!Canvas::isNameUsed(name2))
-        return "No object with name_2 exists";
+        return "Failed: no object with name_2 exists";
     if(name1 == name2)
-        return "Can not connect the object to itself";
+        return "Failed: can not connect the object to itself";
 
     emit(connectRequested(name1, name2));
 
-    return "Success, objects will be connected";
+    return "Success: objects will be connected";
 }
-QString  CommandMessageHandler::handleExecuteCommand(QStringList &list){
-    //TODO
+QString  CommandMessageHandler::handleExecuteCommand(QStringList &commandList){
+    if(commandList.first() != "execute_file")
+        return invalidCommandMessage;
+
+    commandList.removeFirst();//remove the first command from the list to access the file_path parameter
+
+    if(commandList.first() != "-file_path")
+        return invalidFormattingMessage + " -file_path " + parameterExpectedMessage;
+
+    QString fileName = commandList.first();
     return NULL;
 }
