@@ -1,0 +1,79 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-.-Release-510812cc20747258ef2e.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.16"
+					},
+					"projectIndex" : 0,
+					"source" : ".",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2
+					]
+				}
+			],
+			"name" : "Release",
+			"projects" : 
+			[
+				{
+					"directoryIndexes" : 
+					[
+						0
+					],
+					"name" : "CLIPainter",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 0,
+					"id" : "CLIPainter::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-CLIPainter-Release-6cf837a79e3b5ba9f581.json",
+					"name" : "CLIPainter",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "CLIPainter_autogen::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-CLIPainter_autogen-Release-87e2f8574e5b173d3320.json",
+					"name" : "CLIPainter_autogen",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "CLIPainter_autogen_timestamp_deps::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-CLIPainter_autogen_timestamp_deps-Release-abf46988551471cbfdef.json",
+					"name" : "CLIPainter_autogen_timestamp_deps",
+					"projectIndex" : 0
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "/home/gor/programming_projects/CLIPainter/build/Desktop_Qt_6_7_2-Release",
+		"source" : "/home/gor/programming_projects/CLIPainter"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 7
+	}
+}
