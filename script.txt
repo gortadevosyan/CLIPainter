@@ -1,0 +1,5 @@
+﻿create_line -name {line_1} -coord_1 {100,30} -coord_2 {350,-10}
+create_triangle -name {triangle_1} -coord_1 {0,0} -coord_2 {48,0} -coord_3 {0,67}
+create_rectangle -name {rect_1} -coord_1 {56,19} -coord_2 {129,31}
+connect -object_name_1 {triangle_1} -object_name_2 {rect_1}
+execute_file -file_path {../../script.txt}

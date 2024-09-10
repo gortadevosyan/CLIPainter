@@ -22,7 +22,7 @@ QString CommandMessageHandler::handleCreateCommand(QStringList &commandList){
     QString name = NULL; //set the default value to name, if it is not updated, later an error message will be printed
 
     //parse name paramter
-    if(!commandList.isEmpty() && commandList.first()=="-name"){
+    if(commandList.size()>=2 && commandList.first()=="-name"){
         commandList.removeFirst();
         name = commandList.first();
         commandList.removeFirst();
@@ -88,6 +88,17 @@ bool isValidRectangle(std::unique_ptr<QPointF> &coord1, std::unique_ptr<QPointF>
     return true;
 }
 
+bool isValidTriangle(std::unique_ptr<QPointF> &coord1, std::unique_ptr<QPointF> &coord2, std::unique_ptr<QPointF> &coord3){
+    QPointF side1 = QPointF(coord1->x() - coord2->x(), coord1->y() - coord2->y());
+    QPointF side2 = QPointF(coord2->x() - coord3->x(), coord2->y() - coord3->y());
+    QPointF side3 = QPointF(coord3->x() - coord1->x(), coord3->y() - coord1->y());
+    qreal arr[3] = {sqrt(QPointF::dotProduct(side1,side1)), sqrt(QPointF::dotProduct(side2,side2)), sqrt(QPointF::dotProduct(side3,side3))};
+    std::sort(arr, arr+3);
+    if(arr[0] + arr[1] <= arr[2])
+        return false;
+    return true;
+}
+
 QString CommandMessageHandler::handleCreateLineCommand(QStringList &list, QString name){
     if(name.isNull())
         return invalidFormattingMessage + " name " + parameterExpectedMessage;
@@ -103,8 +114,9 @@ QString CommandMessageHandler::handleCreateLineCommand(QStringList &list, QStrin
     if(coord2 == nullptr)
         return invalidFormattingMessage +  " -coord_2 " + parameterExpectedMessage;
 
-    emit(lineRequested(name, coord1->x(), coord1->y(), coord2->x(), coord2->y()));
-
+    if(list.isEmpty())
+        emit(lineRequested(name, coord1->x(), coord1->y(), coord2->x(), coord2->y()));
+    else return invalidCommandMessage;
     return "Success: line will be created";
 }
 
@@ -138,11 +150,11 @@ QString CommandMessageHandler::handleCreateRectangleCommand(QStringList &list, Q
 
     //extract the coordinates of point4
     auto coord4 = handlePointCreation(list, 4);
-    if(coord3== nullptr)
+    if(coord4== nullptr)
         return invalidFormattingMessage + " -coord_4 " + parameterExpectedMessage;
 
     //checks the correctness of the given points
-    if(!isValidRectangle(coord1, coord2, coord3, coord4))
+    if(!isValidRectangle(coord1, coord2, coord3, coord4) || !list.isEmpty())
         return invalidCommandMessage + " given points do not form a rectangle";
 
     emit(rectangleRequested_4(name, coord1->x(), coord1->y(), coord2->x(),coord2->y(), coord3->x(), coord3->y(), coord4->x(), coord4->y()));
@@ -164,7 +176,7 @@ QString CommandMessageHandler::handleCreateSquareCommand(QStringList &list, QStr
 
     //extract the coordinates of point2
     auto coord2 = handlePointCreation(list, 2);
-    if(coord2== nullptr)
+    if(coord2 == nullptr)
         return invalidFormattingMessage + " -coord_2 " + parameterExpectedMessage;
 
     //check which constructor was used, 2 or 4 point one
@@ -175,16 +187,16 @@ QString CommandMessageHandler::handleCreateSquareCommand(QStringList &list, QStr
 
     //extract the coordinates of point3
     auto coord3 = handlePointCreation(list, 3);
-    if(coord3== nullptr)
+    if(coord3 == nullptr)
         return invalidFormattingMessage + " -coord_3 " + parameterExpectedMessage;
 
     //extract the coordinates of point4
     auto coord4 = handlePointCreation(list, 4);
-    if(coord3== nullptr)
+    if(coord4 == nullptr)
         return invalidFormattingMessage + " -coord_4 " + parameterExpectedMessage;
 
     //checks the correctness of the given points
-    if(!isValidRectangle(coord1, coord2, coord3, coord4, true))
+    if(!isValidRectangle(coord1, coord2, coord3, coord4, true) || !list.isEmpty())
         return invalidCommandMessage + ", given points do not form a rectangle";
 
     emit(squareRequested_4(name, coord1->x(), coord1->y(), coord2->x(),coord2->y(), coord3->x(), coord3->y(), coord4->x(), coord4->y()));
@@ -203,12 +215,18 @@ QString CommandMessageHandler::handleCreateTriangleCommand(QStringList &list, QS
         return invalidFormattingMessage + " -coord_1 " + parameterExpectedMessage;
 
     auto coord2 = handlePointCreation(list, 2);
-    if(coord2== nullptr)
+    if(coord2 == nullptr)
         return invalidFormattingMessage + " -coord_2 " + parameterExpectedMessage;
 
     auto coord3 = handlePointCreation(list, 3);
-    if(coord2== nullptr)
+    if(coord3 == nullptr)
         return invalidFormattingMessage + " -coord_3 " + parameterExpectedMessage;
+
+    if(!list.isEmpty())
+        return invalidCommandMessage;
+
+    if(!isValidTriangle(coord1, coord2, coord3))
+        return "Failed: all the points are on the same line";
 
     emit(triangleRequested(name, coord1->x(), coord1->y(), coord2->x(), coord2->y(), coord3->x(), coord3->y()));
 
@@ -221,7 +239,7 @@ QString CommandMessageHandler::handleConnectCommand(QStringList &commandList){
     QString name1 = NULL; //set the default value to name, if it is not updated, later an error message will be printed
     QString name2 = NULL;
     //parse name paramter
-    if(commandList.first()=="-object_name_1"){
+    if(commandList.size()>=2 && commandList.first()=="-object_name_1"){
         commandList.removeFirst();
         name1 = commandList.first();
         commandList.removeFirst();
@@ -250,6 +268,8 @@ QString CommandMessageHandler::handleConnectCommand(QStringList &commandList){
         return "Failed: no object with name_2 exists";
     if(name1 == name2)
         return "Failed: can not connect the object to itself";
+    if(!commandList.isEmpty())
+        return invalidCommandMessage;
 
     emit(connectRequested(name1, name2));
 
@@ -261,9 +281,24 @@ QString  CommandMessageHandler::handleExecuteCommand(QStringList &commandList){
 
     commandList.removeFirst();//remove the first command from the list to access the file_path parameter
 
-    if(commandList.first() != "-file_path")
+    if(commandList.size() < 2 || commandList.first() != "-file_path")
         return invalidFormattingMessage + " -file_path " + parameterExpectedMessage;
 
+    commandList.removeFirst();
     QString fileName = commandList.first();
-    return NULL;
+    fileName.removeFirst();
+    fileName.removeLast();
+    QFile file(fileName);
+
+    if (!file.open(QIODevice::ReadOnly | QIODevice::Text))
+        return invalidCommandMessage + " could not open the file";
+
+    QTextStream in(&file);
+    while (!in.atEnd()) {
+        QString line = in.readLine();
+        this->handleCommand(line);
+    }
+
+    file.close();
+    return "Success: file executed";
 }

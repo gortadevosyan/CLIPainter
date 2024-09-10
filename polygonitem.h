@@ -13,7 +13,7 @@ public:
         poly->paint(painter, option, widget);
         BaseGraphicsItem::paint(painter, option, widget);
     }
-    QRectF boundingRect() const override{
+    virtual QRectF boundingRect() const override{
         return poly->boundingRect();
     }
     virtual ~PolygonItem(){
