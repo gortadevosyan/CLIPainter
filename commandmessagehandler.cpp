@@ -139,6 +139,9 @@ QString CommandMessageHandler::handleCreateRectangleCommand(QStringList &list, Q
 
     //check which constructor was used, 2 or 4 point one
     if(list.isEmpty()){
+        if(coord1->x() == coord2->x() || coord1->y() == coord2->y())
+            return "Failed: there is no rectangle with diagonal (coord_1, coord_2) and parallel to (x,y) axis";
+
         emit(rectangleRequested(name, coord1->x(), coord1->y(), coord2->x(), coord2->y()));
         return "Success: rectangle will be created";
     }
@@ -285,9 +288,13 @@ QString  CommandMessageHandler::handleExecuteCommand(QStringList &commandList){
         return invalidFormattingMessage + " -file_path " + parameterExpectedMessage;
 
     commandList.removeFirst();
+
     QString fileName = commandList.first();
+
+    //get rid of the braces
     fileName.removeFirst();
     fileName.removeLast();
+
     QFile file(fileName);
 
     if (!file.open(QIODevice::ReadOnly | QIODevice::Text))

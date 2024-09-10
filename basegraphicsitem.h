@@ -14,7 +14,6 @@ public:
     };
     void setName(QString str){this->name = str;}
     QString getName(){return this->name;}
-    virtual QPointF getCenter() = 0;
     virtual ~BaseGraphicsItem(){};
 protected:
     void paint(QPainter *painter, const QStyleOptionGraphicsItem *option, QWidget *widget) override {

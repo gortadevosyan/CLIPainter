@@ -20,7 +20,6 @@ public:
     QRectF boundingRect() const override {
         return line->boundingRect();
     }
-
     ~LineItem(){
         delete line;
     }
