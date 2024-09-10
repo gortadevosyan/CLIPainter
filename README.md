@@ -93,11 +93,3 @@ Ensure that Qt 6.7.2 is installed on your system. You can download it from the [
 ## Known Issues
 
 Line names are not displayed properly whenever it is parallel to the y axis. The reason behind this is the small size of the bounding rectangle of lines, which do not fit any characters. To fix this, one can adjust the minimum width of the bounding rectangle for line items, but for larger input names the issue will persist.
-
-## License
-
-This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
-
-## Contact
-
-For any questions or issues, please contact [your-email@example.com](mailto:your-email@example.com).
