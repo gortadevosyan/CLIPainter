@@ -2,7 +2,7 @@
 #define BASEGRAPHICSITEM_H
 
 #include <QGraphicsItem>
-#include <qpainter.h>
+#include <QPainter>
 
 class BaseGraphicsItem : public QGraphicsItem
 {

@@ -28,8 +28,8 @@ QString CommandMessageHandler::handleCreateCommand(QStringList &commandList){
         commandList.removeFirst();
         //removes obsolete braces from the name
         if(name.endsWith('}') && name.startsWith('{')){
-            name.removeFirst();
-            name.removeLast();
+            name.remove(0,1);
+            name.remove(name.length()-1, 1);
         }
     }
 
@@ -54,8 +54,8 @@ std::unique_ptr<QPointF> handlePointCreation(QStringList &list, int coordNo){
         list.removeFirst();
         QString coordTuple = list.first();
         //remove the values of the point coordinates from the list
-        coordTuple.removeFirst();
-        coordTuple.removeLast();
+        coordTuple.remove(0, 1);
+        coordTuple.remove(coordTuple.length()-1, 1);
         QStringList crds = coordTuple.split(',');
         if(crds.size() != 2) //invalid formatting
             return nullptr;
@@ -248,8 +248,8 @@ QString CommandMessageHandler::handleConnectCommand(QStringList &commandList){
         commandList.removeFirst();
         //removes obsolete braces from the name
         if(name1.endsWith('}') && name1.startsWith('{')){
-            name1.removeFirst();
-            name1.removeLast();
+            name1.remove(0,1);
+            name1.remove(name1.length()-1, 1);
         }
     }
     else return "Failed: invalid argument, object_name_1 expected";
@@ -259,8 +259,8 @@ QString CommandMessageHandler::handleConnectCommand(QStringList &commandList){
         commandList.removeFirst();
         //removes obsolete braces from the name
         if(name2.endsWith('}') && name2.startsWith('{')){
-            name2.removeFirst();
-            name2.removeLast();
+            name2.remove(0,1);
+            name2.remove(name2.length()-1, 1);
         }
     }
     else return "Failed: invalid argument, object_name_2 expected";
@@ -292,8 +292,8 @@ QString  CommandMessageHandler::handleExecuteCommand(QStringList &commandList){
     QString fileName = commandList.first();
 
     //get rid of the braces
-    fileName.removeFirst();
-    fileName.removeLast();
+    fileName.remove(0,1);
+    fileName.remove(fileName.length()-1, 1);
 
     QFile file(fileName);
 

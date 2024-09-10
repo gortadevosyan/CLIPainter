@@ -1,2 +1,0 @@
-set(__QT_DEPLOY_TARGET_CLIPainter_FILE /home/gor/programming_projects/CLIPainter/build/Desktop_Qt_6_7_2-Release/CLIPainter)
-set(__QT_DEPLOY_TARGET_CLIPainter_TYPE EXECUTABLE)

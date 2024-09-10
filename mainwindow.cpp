@@ -12,7 +12,7 @@ MainWindow::MainWindow(QWidget *parent)
     , scene(new QGraphicsScene(this))
 {
     ui->setupUi(this);
-    canvas = new Canvas(this);
+    this->canvas = new Canvas(this);
     QObject::connect(canvas, &Canvas::objectAdded, this, &MainWindow::on_objectAddedToScene);
     QObject::connect(canvas, &Canvas::objectRemoved, this, &MainWindow::on_objecRemovedFromScene);
     ui->graphicsView->setScene(this->scene);

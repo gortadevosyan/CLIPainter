@@ -3,7 +3,7 @@
 #include "rectangleitem.h"
 #include "squareitem.h"
 #include "triangleitem.h"
-
+#include <QObject>
 QHash<QString, BaseGraphicsItem*> Canvas::map;
 
 Canvas::Canvas(QObject *parent){
@@ -33,7 +33,7 @@ void Canvas::on_rectangleRequested(QString name, qreal x1, qreal y1, qreal x2, q
     emit(objectAdded(rect));
 }
 void Canvas::on_rectangleRequested_4(QString name, qreal x1, qreal y1, qreal x2, qreal y2, qreal x3, qreal y3, qreal x4, qreal y4){
-    RectangleItem *rect = new RectangleItem(x1, y1, x2, y2, nullptr, name);
+    RectangleItem *rect = new RectangleItem(x1, y1, x3, y3, nullptr, name);
     map.insert(name, rect);
     emit(objectAdded(rect));
 }

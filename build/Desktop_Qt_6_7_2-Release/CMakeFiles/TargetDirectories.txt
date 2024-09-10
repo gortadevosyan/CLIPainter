@@ -1,9 +1,0 @@
-/home/gor/programming_projects/CLIPainter/build/Desktop_Qt_6_7_2-Release/CMakeFiles/CLIPainter.dir
-/home/gor/programming_projects/CLIPainter/build/Desktop_Qt_6_7_2-Release/CMakeFiles/edit_cache.dir
-/home/gor/programming_projects/CLIPainter/build/Desktop_Qt_6_7_2-Release/CMakeFiles/rebuild_cache.dir
-/home/gor/programming_projects/CLIPainter/build/Desktop_Qt_6_7_2-Release/CMakeFiles/list_install_components.dir
-/home/gor/programming_projects/CLIPainter/build/Desktop_Qt_6_7_2-Release/CMakeFiles/install.dir
-/home/gor/programming_projects/CLIPainter/build/Desktop_Qt_6_7_2-Release/CMakeFiles/install/local.dir
-/home/gor/programming_projects/CLIPainter/build/Desktop_Qt_6_7_2-Release/CMakeFiles/install/strip.dir
-/home/gor/programming_projects/CLIPainter/build/Desktop_Qt_6_7_2-Release/CMakeFiles/CLIPainter_autogen_timestamp_deps.dir
-/home/gor/programming_projects/CLIPainter/build/Desktop_Qt_6_7_2-Release/CMakeFiles/CLIPainter_autogen.dir
