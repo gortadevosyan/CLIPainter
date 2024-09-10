@@ -1,3 +1,0 @@
-﻿create_square -name {babken} -coord_1 {19,29} -coord_2 {84,117}
-create_rectangle -name {pilipos} -coord_1 {-20,-20} -coord_2 {10,-40}
-connect -object_name_1 {pilipos} -object_name_2 {babken}
