@@ -62,7 +62,7 @@ Ensure that Qt 6.7.2 is installed on your system. You can download it from the [
 
 - Launch the application to open the main window.
 
-- Use the command line interface to create and manipulate graphical objects.
+- Use the command line interface to create and manipulate graphical objects. 
 
 - Available commands include `create_line`, `create_rectangle`, `create_square`, `create_triangle`,  `connect` and ``execute_file``.
 
@@ -88,7 +88,7 @@ Ensure that Qt 6.7.2 is installed on your system. You can download it from the [
   #note, that by default,during execution the local address is under ../build/Desktop_Qt_6_7_2-Debug, hence the file location should be adjusted accortingly when relative path is used.
   ``````
 
-  
+  Please note that for objects to be properly drawn and displayed it is recommended to have the sizes >= 20 for lines and >= 10 per side for other geometric objects.
 
 ## Known Issues
 

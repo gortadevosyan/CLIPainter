@@ -1,0 +1,4 @@
+# Hashes of file build rules.
+aca93353a765ca9b08a260b6dc8cc4d8 CLIPainter_autogen/timestamp
+ec891e91a3a7cfd12572fc615f9e873f CMakeFiles/CLIPainter_autogen
+ec891e91a3a7cfd12572fc615f9e873f CMakeFiles/CLIPainter_autogen_timestamp_deps

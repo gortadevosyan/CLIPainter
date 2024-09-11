@@ -1,0 +1,9 @@
+/home/gor/programming_projects/CLIPainter/CMakeFiles/CLIPainter.dir
+/home/gor/programming_projects/CLIPainter/CMakeFiles/edit_cache.dir
+/home/gor/programming_projects/CLIPainter/CMakeFiles/rebuild_cache.dir
+/home/gor/programming_projects/CLIPainter/CMakeFiles/list_install_components.dir
+/home/gor/programming_projects/CLIPainter/CMakeFiles/install.dir
+/home/gor/programming_projects/CLIPainter/CMakeFiles/install/local.dir
+/home/gor/programming_projects/CLIPainter/CMakeFiles/install/strip.dir
+/home/gor/programming_projects/CLIPainter/CMakeFiles/CLIPainter_autogen_timestamp_deps.dir
+/home/gor/programming_projects/CLIPainter/CMakeFiles/CLIPainter_autogen.dir
